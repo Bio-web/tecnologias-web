@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primera clase.
+title: Primera clase
 author: El autor
 ---
 
