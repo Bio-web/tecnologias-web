@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Blog de clase para la materia de Tecnologías para el desarrollo de aplicaciones web.
+title: Primera clase.
 ---
-# *Primera clase*
 
 Detalles de la primera clase
