@@ -5,4 +5,3 @@ title: Blog de clase para la materia de Tecnologías para el desarrollo de aplic
 # *Primera clase*
 
 Detalles de la primera clase
-hola 
