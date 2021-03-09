@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Primera clase
+title: Generalidades de linux
 author: Santiago Henao Gonzalez
 date: 2021-03-05
 ---
