@@ -46,19 +46,21 @@ se procedio a revisar algunos de los comandos básicos, entre ellos cabe mencion
 - "**cd**" comando que sirve para cambiar el directorio actual, básicamente moverse entre carpetas.
 - "**pwd**" el cual muestra el directorio actual.
 - "**ls**" comando que lista el contenido del directorio actual, es posible pasarle parámetros como **-l** que hace la lista descendente mientras que **-lt** hace que se muestre una lista descendente por fecha de creación.
-- "**whoami**" que muestra el usuario que se esta usando actualmente.
+- "**whoami**" que muestra el usuario que se está usando actualmente.
 - "**rm**" que permite borrar archivos, se puede usar el parámetro -rf para realizar operaciones de borrado recursivas y forzadas(no se pregunta si se desea continuar en cada una de ellas).
-- "**rmdir**" que como es de esperarse remueve directorios, sin embargo no se puede borrar directorios no vacios, aunque para remediar esto se puede usar también el parámetro -rf.
+- "**rmdir**" que como es de esperarse remueve directorios, sin embargo no se puede borrar directorios no vacios, aunque para remediar esto se puede usar también el parámetro **-rf**.
 - "**mkdir**" comando que permite crear un directorio en el directorio actual o en la ruta proporcionada.
 - "**touch**" el cual actualiza la fecha de modificación del archivo.
 - "**cp**" con el cual se copian archivos a la ruta destino proporcionada.
 - "**mv**" el cual mueve archivos a la ruta destino.
 - "**nv**" el cual renombra archivos, además puede a la vez moverlos a otra ruta si se propociona una ruta destino.
 - "**su -**" pide permiso con password.
-- "**wget**" descarga 
+- "**wget**" descargar cosas de la nube por consola.
+- "**file**" permite conocer la extensión de cada archivo.
+- "**cat**" permite ver el contenido de un archivo.
 
-Otro comando que se trabajo fue **"sudo"** el cual si antecedia un comando permitia ejecutar este con derechos de administrador, por lo cual se mostró su uso para usar pasar a ser un usuario administrador con el comando **"sudo su -"** lo cual brindaba accesoa la carpeta "/root" antes inaccesible. Se hizo especial enfásis en tener cuidado a la hora de trabajar usando un usuario administrador, pues se pueden borrar por accidente archivos necesarios para el funcionamiento del sistema operativo.
+Otro comando que se trabajo fue **"sudo"** el cual si antecedia un comando permitia ejecutar este con derechos de administrador, por lo cual se mostró su uso para usar pasar a ser un usuario administrador con el comando **"sudo su -"** lo cual brindaba acceso a la carpeta **"/root"** antes inaccesible. Se hizo especial enfásis en tener cuidado a la hora de trabajar usando un usuario administrador, pues se pueden borrar por accidente archivos necesarios para el funcionamiento del sistema operativo.
 
-Finalmente se explicó el uso del comando **"exit"** para cerrar cesión del usuario administrador y luego se mostró como se detenia de manera correcta la maquina virtual.
+Finalmente se explicó el uso del comando **"exit"** para cerrar sesión del usuario administrador y luego se mostró como se detenia de manera correcta la máquina virtual, además usando el comando vagrant **halt** permite apagar el sistema de desarrollo de nuestra máquina de una manera correcta.
 
 
