@@ -11,7 +11,7 @@ Para comenzar se realizó una revisión rápida de la guía para la instalación
 
 Luego de haber hecho la demostración de la instalación se pocedio a discutir acerca de la estructura básica de las carpetas en Linux. Entre las carpetas que se discutieron se destacan:
 
-- "/" que básicamente es la carpeta base en la que están contenidos todos los archivos.
+- "**/**" que básicamente es la carpeta base en la que están contenidos todos los archivos.
 - "/bin" la carpeta en donde se almacenan los programas y funciones básicas del sistema operativo.
 - "/etc" Donde se almacenan configuraciones del sistema y los archivos con los datos de los usuarios.
 - "/home" Donde se guardan las carpetas de los usuarios que guardarán sus respectivos archivos.
