@@ -41,3 +41,7 @@ se procedio a revisar algunos de los comandos básicos, entre ellos cabe mencion
 Otro comando que se trabajo fue "sudo" el cual si antecedia un comando permitia ejecutar este con derechos de administrador, por lo cual se mostro su uso para usar pasar a ser un usuario administrador con el comando "sudo su -" lo cual brindaba accesoa la carpeta "/root" antes inaccesible. Se hizo especial enfásis en tener cuidado a la hora de trabajar usando un usuario administrador, pues se pueden borrar por accidente archivos necesarios para el funcionamiento del sistema operativo.
 
 Finalmente se explicó el uso del comando "exit" para cerrar cesión del usuario administrador y luego se mostró como se detenia de manera correcta la maquina virtual.
+
+
+HOLA LUISITA
+
