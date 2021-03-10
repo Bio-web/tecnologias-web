@@ -38,7 +38,7 @@ Luego de haber hecho la demostración de la instalación se pocedio a discutir a
 
 **Nota**: tener  en cuenta que dentro del root usando el comando **rm-rf** se puede eliminar todo el sistema.
 
-Adicionalmente se hablo de las maneras en que se puede referir a la ubicación de un archivo en alguna de estas carpetas, la manera básica es citando su posición exacta comenzando por la carpeta "/" un ejemplo sería "/home/santiago/musica/" o simplemente usando lo que se llama una **ruta relativa**, la cual obvia ciertas partes de la ubicación del archivo "santiago/musica". También se puede escribir rutas deacuerdo al directorio actual, usando los comodines **"."** que se refiere a la carpeta actual y **".."** que se refiere a la carpeta padre.
+Adicionalmente se hablo de las maneras en que se puede referir a la ubicación de un archivo en alguna de estas carpetas, la manera básica es citando su posición exacta comenzando por la carpeta **"/"** un ejemplo sería "/home/santiago/musica/" o simplemente usando lo que se llama una **ruta relativa**, la cual obvia ciertas partes de la ubicación del archivo "santiago/musica". También se puede escribir rutas deacuerdo al directorio actual, usando los comodines **"."** que se refiere a la carpeta actual y **".."** que se refiere a la carpeta padre.
 
 Habiendo entendido en terminos generales la estructura de las carpetas del sistema operativo Linux,
 se procedio a revisar algunos de los comandos básicos, entre ellos cabe mencionar:
@@ -47,7 +47,7 @@ se procedio a revisar algunos de los comandos básicos, entre ellos cabe mencion
 - "**pwd**" el cual muestra el directorio actual.
 - "**ls**" comando que lista el contenido del directorio actual, es posible pasarle parámetros como **-l** que hace la lista descendente mientras que **-lt** hace que se muestre una lista descendente por fecha de creación.
 - "**whoami**" que muestra el usuario que se está usando actualmente.
-- "**rm**" que permite borrar archivos, se puede usar el parámetro -rf para realizar operaciones de borrado recursivas y forzadas(no se pregunta si se desea continuar en cada una de ellas).
+- "**rm**" que permite borrar archivos, se puede usar el parámetro **-rf** para realizar operaciones de borrado recursivas y forzadas(no se pregunta si se desea continuar en cada una de ellas).
 - "**rmdir**" que como es de esperarse remueve directorios, sin embargo no se puede borrar directorios no vacios, aunque para remediar esto se puede usar también el parámetro **-rf**.
 - "**mkdir**" comando que permite crear un directorio en el directorio actual o en la ruta proporcionada.
 - "**touch**" el cual actualiza la fecha de modificación del archivo.
