@@ -49,7 +49,7 @@ Donde X puede ser :
  Ejecution(x)
 - Para aplicar permisos recursivamente a folders se puede con **chmod -R 754 myapp**
 
-# Instalar/Desisntalar 
+# Instalar/Desinstalar 
 - **sudo apt update:** Para refrescar la base de datos de paquetes en ubuntu
 - **apt search name_paquete** Busca paquetes
 - **sudo apt install name_paquete:** Instalar paquetes
@@ -63,16 +63,21 @@ Es la creación de una red de trabajo en un ordenador
 **DNS:** Servicio que se encarga de traducir a IP
 **nslookup:** Servicio para consultar DNS
 
+- **systemctl status name_paquete** Sirve para ver si el servicio está encendido
+- **sudo systemctl start apache2** Enciende el servicio
+- **sudo systemctl stop name_paquete** Se utiliza para pagar el servicio
+- **sudo systemctl disable name_paquete:**  Cada vez que la máquina comience, el servicio deberá de activar manualmente
+- **sudo systemctl enable name_paquete:** Cada vez que la máquina comience, el servicio ya estará en funcionamiento
+
+**¿Qué es apache?**
+Apache es un servidor web de de código abierto, multiplataforma y gratuito. Que sirve para desplegar páginas web o programas.
 
 
-# instalar apache
-sudo apt install apache2
-# ver si el servicio está encendido
-systemctl status apache2
-# apagar el servicio de apache
-sudo systemctl stop apache2
-# prender el servicio
-sudo systemctl start apache2
+# Editores de texto
+- **nano:** Editor de texto por consola
+- El archivo creado por nano se puede editor en modo **edición** Y las acciones que muestra en pantalla pueden ser accedidas a partir el comando **ctrl + letra indicada**
+- 
 
-sudo systemctl disable apache2
-sudo systemctl enable apache2
+
+
+
