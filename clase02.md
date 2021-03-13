@@ -7,6 +7,10 @@ date: 2021-03-12
 **EXTRAS**
 Con el comando **clear** podemos vaciar o limpar la pantalla de la consola
 Para eliminar una carpeta en home se hace de la siguiente con **rmdir -rf /home/"${username}"** 
+**apt:** Utilidad para actualizar,instalar o remover basados en Ubuntu
+**yum:** Buscar todos los archivos basados en red hat
+**pacman:** Utilidades basadas en hart Linux 
+
 
 **Modelo OSI**
 Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo comunicar la unidad de datos con el nivelo capa.
@@ -38,23 +42,29 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 
 - Para asignar los permisos requeridos a una carpeta se hace con **sudo chown -R usuario.grupo carpeta** 
 - Para crear archivos dentro de un archivo donde se tiene acceso se puede hacer con **echo "New_edition" namefile.txt** y para visualizar dicha edición es **cat namefile.txt** 
-- Para modificar los accesos de un directorio o un folders es posible con **chmod ±X archivo** o **chmod 754 archivo** estando en el ambiente vagrant.
+- Para modificar los accesos de un directorio,archivo o folders es posible con **chmod ±X archivo** o **chmod 754 archivo** estando en el ambiente vagrant.
 Donde X puede ser : 
--- Read(r) 
+ Read(r) 
  Write (w)
  Ejecution(x)
+- Para aplicar permisos recursivamente a folders se puede con **chmod -R 754 myapp**
 
-# aplicando permisos recursivamente a folders
-chmod -R 754 myapp
+# Instalar/Desisntalar 
+- **sudo apt update:** Para refrescar la base de datos de paquetes en ubuntu
+- **apt search name_paquete** Busca paquetes
+- **sudo apt install name_paquete:** Instalar paquetes
+- **name name_paquete:** Observa el contenido de name_paquete
+- **sudo apt remove neofetch:** desinstalar name_paquete
 
-# refrescar la base de datos de paquetes en ubuntu
-sudo apt update
-# buscar paquetes
-apt search neofetch
-# instalar
-sudo apt install neofetch
-# desinstalar
-sudo apt remove neofetch
+# Servicios
+Es la creación de una red de trabajo en un ordenador
+**¿Qué es un puerto?**
+- Es una interfaz a través de la cual se pueden enviar y recibir los diferentes tipos de datos.
+**DNS:** Servicio que se encarga de traducir a IP
+**nslookup:** Servicio para consultar DNS
+
+
+
 # instalar apache
 sudo apt install apache2
 # ver si el servicio está encendido
@@ -64,4 +74,5 @@ sudo systemctl stop apache2
 # prender el servicio
 sudo systemctl start apache2
 
-
+sudo systemctl disable apache2
+sudo systemctl enable apache2
