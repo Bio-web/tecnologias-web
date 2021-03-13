@@ -4,13 +4,6 @@ title: **Generalidades linux- parte 2**
 author: Luisa Maria Zapara Saldarriaga
 date: 2021-03-12
 ---
-**EXTRAS**
-Con el comando **clear** podemos vaciar o limpar la pantalla de la consola
-Para eliminar una carpeta en home se hace de la siguiente con **rmdir -rf /home/"${username}"** 
-**apt:** Utilidad para actualizar,instalar o remover basados en Ubuntu
-**yum:** Buscar todos los archivos basados en red hat
-**pacman:** Utilidades basadas en hart Linux 
-
 
 **Modelo OSI**
 Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo comunicar la unidad de datos con el nivelo capa.
@@ -27,6 +20,7 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 - Crea una carpeta incluyendo alguna información que requiere un password **sudo passwd new_user** como se muestra en la siguiente imagen.
  
 ![image](https://user-images.githubusercontent.com/64289042/111040738-84569580-8402-11eb-9242-2f0bec5eee51.png)
+
 - Cambiar password con **sudo passwd new_user** 
 - Al entrar como root puedo cambiarme a otro un usuario con **sudo su - new_user**. Tener en cuenta que desde este usuario es necesario conocer el **password** para convertirse de nuevo en el usuario **vagrant**, de lo contrario con el comando **exit** puede retornar a dicho usuario.
 - Se puede eliminar un usuario con **sudo deluser new_user**
@@ -40,8 +34,8 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 - Además para revisar los permisos que se tiene en cada directorio en un respectivo grupo se puede ver con el comando **ls -l** obteniendo lo siguiente:
 ![image](https://user-images.githubusercontent.com/64289042/111041528-8de1fc80-8406-11eb-815e-c532a1b28c70.png)
 
-- Para asignar los permisos requeridos a una carpeta se hace con **sudo chown -R usuario.grupo carpeta** 
-- Para crear archivos dentro de un archivo donde se tiene acceso se puede hacer con **echo "New_edition" namefile.txt** y para visualizar dicha edición es **cat namefile.txt** 
+- Para asignar los permisos requeridos a una carpeta se hace con la siguiente línea: **sudo chown -R usuario.grupo carpeta** 
+- Para crear archivos dentro de un archivo donde se tiene acceso se puede hacer con: **echo "New_edition" namefile.txt** y para visualizar dicha edición es: **cat namefile.txt** 
 - Para modificar los accesos de un directorio,archivo o folders es posible con **chmod ±X archivo** o **chmod 754 archivo** estando en el ambiente vagrant.
 Donde X puede ser : 
  Read(r) 
@@ -78,5 +72,10 @@ Es la creación de una red de trabajo en un ordenador
 - 
 
 
-
+**Anexos**
+Con el comando **clear** podemos vaciar o limpar la pantalla de la consola
+Para eliminar una carpeta en home se hace de la siguiente con **rmdir -rf /home/"${username}"** 
+**apt:** Utilidad para actualizar,instalar o remover basados en Ubuntu
+**yum:** Buscar todos los archivos basados en red hat
+**pacman:** Utilidades basadas en hart Linux 
 
