@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Generalidades linux- parte 2
-author: Luisa Maria Zapara Saldarriaga
+author: Luisa Maria Zapata Saldarriaga
 date: 2021-03-12
 ---
 En el presente informe, se encuentra un resumen detallado de algunas generalidades acerca de como crear, agregar y utilizar usuarios, incluyendo el tema de permisos en bloques que va permitir ciertas funciones dependiendo del tipo de usuario. Además, tambien se aborda el tema de instalación y desinstalación de paquetes, servicios, y el tipo de editores, principalmente vim.  
