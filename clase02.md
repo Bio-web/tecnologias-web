@@ -38,11 +38,11 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 
 - Para asignar los permisos requeridos a una carpeta se hace con **sudo chown -R usuario.grupo carpeta** 
 - Para crear archivos dentro de un archivo donde se tiene acceso se puede hacer con **echo "New_edition" namefile.txt** y para visualizar dicha edición es **cat namefile.txt** 
-- Para modificar los accesos de un directorio es posible con **chmod ±X archivo** o **chmod 754 archivo** estando en el ambiente vagrant.
+- Para modificar los accesos de un directorio o un folders es posible con **chmod ±X archivo** o **chmod 754 archivo** estando en el ambiente vagrant.
 Donde X puede ser : 
-- Read(r) 
-- Write (w)
-- Ejecution(x(
+-- Read(r) 
+ Write (w)
+ Ejecution(x)
 
 # aplicando permisos recursivamente a folders
 chmod -R 754 myapp
