@@ -28,11 +28,13 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 
 # Grupos
 - Para revisar los grupos existentes se hace con **nano /etc/group**
-- Para crear un nuevo grupo **sudo addgroup new_group**
+- Para crear un nuevo grupo **sudo addgroup new_group** 
 
 
-- Existen permisos en los grupos en bloques como se desgloza a continuación:
+- Existen permisos para los grupos en bloques como se desgloza a continuación:
 ![image](https://user-images.githubusercontent.com/64289042/111041376-e4027000-8405-11eb-8074-0650de186740.png)
+- Además para revisar los permisos que se tiene en cada directorio en un respectivo grupo se puede ver con el comando **ls -l** obteniendo lo siguiente:
+![image](https://user-images.githubusercontent.com/64289042/111041528-8de1fc80-8406-11eb-815e-c532a1b28c70.png)
 
 
 
