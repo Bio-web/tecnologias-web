@@ -1,6 +1,6 @@
 ---
 layout: post
-title: **Generalidades de linux-parte 1**
+title: Generalidades de linux-parte 1
 author: Santiago Henao Gonzalez
 date: 2021-03-05
 ---
