@@ -20,7 +20,7 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 **TCP**: Protocolo orientado a la conexión
 **UDP**= Protocolo asíncrono **no** orientado a la conexión
 
-# Generalidades de los usuarios:
+## Generalidades de los usuarios:
 
 - Conocer los usuarios se debe colocar el comando **nano /etc/passwd** 
 - Agregar o añadir usuario con **sudo useradd new_user**
@@ -31,7 +31,7 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 - Al entrar como root puedo cambiarme a otro un usuario con **sudo su - new_user**. Tener en cuenta que desde este usuario es necesario conocer el **password** para convertirse de nuevo en el usuario **vagrant**, de lo contrario con el comando **exit** puede retornar a dicho usuario.
 - Se puede eliminar un usuario con **sudo deluser new_user**
 
-# Grupos
+### Grupos
 - Para crear un nuevo grupo **sudo addgroup new_group** 
 - Para revisar los grupos existentes se hace con **nano /etc/group**
 - Para agregrar un asuario a un determinado grupo es con **sudo usermod -aG grugo usuario**
@@ -49,14 +49,14 @@ Donde X puede ser :
  Ejecution(x)
 - Para aplicar permisos recursivamente a folders se puede con **chmod -R 754 myapp**
 
-# Instalar/Desinstalar 
+## Instalar/Desinstalar 
 - **sudo apt update:** Para refrescar la base de datos de paquetes en ubuntu
 - **apt search name_paquete** Busca paquetes
 - **sudo apt install name_paquete:** Instalar paquetes
 - **name name_paquete:** Observa el contenido de name_paquete
 - **sudo apt remove neofetch:** desinstalar name_paquete
 
-# Servicios
+## Servicios
 Es la creación de una red de trabajo en un ordenador
 **¿Qué es un puerto?**
 - Es una interfaz a través de la cual se pueden enviar y recibir los diferentes tipos de datos.
@@ -69,11 +69,10 @@ Es la creación de una red de trabajo en un ordenador
 - **sudo systemctl disable name_paquete:**  Cada vez que la máquina comience, el servicio deberá de activar manualmente
 - **sudo systemctl enable name_paquete:** Cada vez que la máquina comience, el servicio ya estará en funcionamiento
 
-**¿Qué es apache?**
-Apache es un servidor web de de código abierto, multiplataforma y gratuito. Que sirve para desplegar páginas web o programas.
+**¿Qué es apache?:** Apache es un servidor web de de código abierto, multiplataforma y gratuito. Que sirve para desplegar páginas web o programas.
 
 
-# Editores de texto
+## Editores de texto
 - **nano:** Editor de texto por consola
 - El archivo creado por nano se puede editor en modo **edición** Y las acciones que muestra en pantalla pueden ser accedidas a partir el comando **ctrl + letra indicada**
 - 
