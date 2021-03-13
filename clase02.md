@@ -4,6 +4,7 @@ title: **Generalidades linux- parte 2**
 author: Luisa Maria Zapara Saldarriaga
 date: 2021-03-12
 ---
+En el presente informe, se encuentra un resumen detallado de algunas generalidades acerca de como crear, agregar y utilizar usuarios, incluyendo el tema de permisos en bloques que va permitir ciertas funciones dependiendo del tipo de usuario. Además, tambien se aborda el tema de instalación y desinstalación de paquetes, servicios, y el tipo de editores, principalmente vim.  
 
 **Modelo OSI**
 Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo comunicar la unidad de datos con el nivelo capa.
@@ -30,8 +31,11 @@ Es el modelo de interconexión de sistemas abiertos, el cual, tiene por objetivo
 - Para revisar los grupos existentes se hace con **nano /etc/group**
 - Para agregrar un asuario a un determinado grupo es con **sudo usermod -aG grugo usuario**
 - Existen permisos para los grupos en bloques como se desgloza a continuación:
+- 
 ![image](https://user-images.githubusercontent.com/64289042/111041376-e4027000-8405-11eb-8074-0650de186740.png)
+
 - Además para revisar los permisos que se tiene en cada directorio en un respectivo grupo se puede ver con el comando **ls -l** obteniendo lo siguiente:
+
 ![image](https://user-images.githubusercontent.com/64289042/111041528-8de1fc80-8406-11eb-815e-c532a1b28c70.png)
 
 - Para asignar los permisos requeridos a una carpeta se hace con la siguiente línea: **sudo chown -R usuario.grupo carpeta** 
