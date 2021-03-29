@@ -76,7 +76,7 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 
 **Instrucciones de inserción, actualización y borrado en la base de datos**
 
-- **1. Inserción:**
+- ### **1. Inserción:**
 
 **INSERT INTO** nombre_tabla(campo1,campo2,…,campoN) **VALUES** (valor1,valor2,…,valorN);
 Ej:
