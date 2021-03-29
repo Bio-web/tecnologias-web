@@ -82,13 +82,14 @@ Ej:
 INSERT INTO categorias(nombre, descripcion) VALUES ("Nueva categoría", "Nueva Descripción");
 
 - *2. Actualización (Recordar siempre usar el WHERE):*
--   2.1. Por clave primaria:
+
+ 2.1. Por clave primaria:
 UPDATE nombre_tabla SET campo=nuevo_valor WHERE campo_clave_primaria = valor;
 Ej:
 UPDATE cursos SET nombre = "Español" WHERE id = 5;
+
 2.2. Usando condición:
-UPDATE nombre_tabla SET campo=nuevo_valor WHERE campo1 = valor1 AND campo2 =
-valor2 … campo_otra_condicion = valorN;
+UPDATE nombre_tabla SET campo=nuevo_valor WHERE campo1 = valor1 AND campo2 = valor2 … campo_otra_condicion = valorN;
 Ej:
 UPDATE cursos SET nombre = "Lectoescritura" WHERE nombre LIKE "%spa%";
 
