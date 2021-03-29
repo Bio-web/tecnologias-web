@@ -76,12 +76,13 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 
 **Instrucciones de inserción, actualización y borrado en la base de datos**
 - *1. Inserción:*
+
 INSERT INTO nombre_tabla(campo1,campo2,…,campoN) values (valor1,valor2,…,valorN);
 Ej:
 INSERT INTO categorias(nombre, descripcion) VALUES ("Nueva categoría", "Nueva Descripción");
 
 - *2. Actualización (Recordar siempre usar el WHERE):*
--  2.1. Por clave primaria:
+-   2.1. Por clave primaria:
 UPDATE nombre_tabla SET campo=nuevo_valor WHERE campo_clave_primaria = valor;
 Ej:
 UPDATE cursos SET nombre = "Español" WHERE id = 5;
