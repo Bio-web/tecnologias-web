@@ -57,10 +57,26 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 - Vagrant ssh
 - sudo usermod -aG docker vagrant 
 - mkdir dbdata
-sudo systemctl stop mysql
-docker run -ti --rm --name mysqldb -d -p 3306:3306 -v $PWD/dbdata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=peliculas -e MYSQL_USER=peliculas -e MYSQL_PASSWORD=password mysql:5.7
-docker stop mysqldb
-docker ps
+- sudo systemctl stop mysql(Por si hay otro MySQL instalado)
+- docker run -ti --rm --name mysqldb -d -p 3306:3306 -v $PWD/dbdata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=peliculas -e MYSQL_USER=peliculas -e MYSQL_PASSWORD=password mysql:5.7
+- docker star mysqldb (Correr los contenedores)
+- docker ps (Lista los contenedores que están corriendo)
+- docker stop mysqldb (Detiene los contenedores)
+
+# dbeaver
+
+- Instalar la aplicación desde https://dbeaver.io/download/ 
+- Seleccione *Nueva conexión*
+- En Seccione base de datos dar clic en MySQL y configurar las siguientes opciones
+
+![image](https://user-images.githubusercontent.com/64289042/112910284-ae71ae00-90b8-11eb-9079-964e20a877d1.png)
+
+ y en la opción de contraseña : password
+ 
+
+
+
+
 
 
 
