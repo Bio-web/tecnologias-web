@@ -72,8 +72,24 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 ![image](https://user-images.githubusercontent.com/64289042/112910284-ae71ae00-90b8-11eb-9079-964e20a877d1.png)
 
  y en la opción de contraseña : password
- 
+ - Dar clic derecho sobre la nueva conexión -> herramientas -> restore database ->  buscar el archivo .sql del workbench
 
+**Instrucciones de inserción, actualización y borrado en la base de datos**
+- *1. Inserción:*
+INSERT INTO nombre_tabla(campo1,campo2,…,campoN) values (valor1,valor2,…,valorN);
+Ej:
+INSERT INTO categorias(nombre, descripcion) VALUES ("Nueva categoría", "Nueva Descripción");
+
+- *2. Actualización (Recordar siempre usar el WHERE):*
+-  2.1. Por clave primaria:
+UPDATE nombre_tabla SET campo=nuevo_valor WHERE campo_clave_primaria = valor;
+Ej:
+UPDATE cursos SET nombre = "Español" WHERE id = 5;
+2.2. Usando condición:
+UPDATE nombre_tabla SET campo=nuevo_valor WHERE campo1 = valor1 AND campo2 =
+valor2 … campo_otra_condicion = valorN;
+Ej:
+UPDATE cursos SET nombre = "Lectoescritura" WHERE nombre LIKE "%spa%";
 
 
 
