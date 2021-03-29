@@ -47,9 +47,13 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 
 # CONEXIÓN ENTRE MySQL y DOCKER
 
+- Para direccionar la base de datos de MySQL a nuestro equipo cambiamos el *host* de la siguiente manera
 
+*config.vm.network "forwarded_port", guest: 80, host: 8080*
+*config.vm.network "forwarded_port", guest: 3306, host: 3309*
 
-
+- Vagrant halt
+- Vagrant up
 
 
 
