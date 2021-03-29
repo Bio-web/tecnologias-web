@@ -18,7 +18,9 @@ Para crear un nuevo modelo se deben hacer los siguientes pasos:
 ![image](https://user-images.githubusercontent.com/64289042/112903709-82046480-90ad-11eb-8ef5-799a50d69a32.png)
 
 *PK:* Primary key
+
 *NN:* Not nule(No obligatorio) 
+
 *AI:* Autoimplement 
  
 **Tipos de variables**
