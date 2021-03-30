@@ -133,7 +133,7 @@ Ej:
 
    **FROM** personas pers
    
-  **WHERE** (pers.nombres = 'Juan Felipe' **OR** pers.ciudad = 'Bello' **AND** pers.nombres LIKE 'Juan%')
+   **WHERE** (pers.nombres = 'Juan Felipe' **OR** pers.ciudad = 'Bello' **AND** pers.nombres LIKE 'Juan%')
 
 
 2. pers.nombres **LIKE**  %Juan busca todos los que terminen por Juan
@@ -142,7 +142,7 @@ Ej:
    
    pers.nombres **LIKE** Ju%an% busca todos los que empiezan por Ju o Juan 
 
-**Para ilustrar la relación entre el id de dos tablas**
+### **Para ilustrar la relación entre el id de dos tablas**
 
 - **INSERT INTO** generos(nombre, descripcion) **VALUES** ('comedia','Peliculas graciosas');
 - **INSERT INTO** generos(nombre, descripcion) **VALUES** ('terror','Peliculas que dan miedo');
@@ -155,7 +155,9 @@ Ej:
 - **INSERT INTO** peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) **VALUES** ('El stand de los besos','sdffs',2019,'resumen',3);
 
 **SELECT** *
+
 **FROM** generos gen, peliculas pel
+
 **WHERE** pel.genero = gen.id
 
 
