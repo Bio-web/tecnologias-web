@@ -122,15 +122,21 @@ Ej:
 - ## **4. Consultar** 
 
 **SELECT** (Hace referencia a las columnas)
+
 **FROM**  (Hace referencia a las tablas)
-**WHERE**  (Permite filtrar información utilizando lógica booleana como OR,AND o LIKE que permite hacer búsquedas)
+
+**WHERE**  (Permite filtrar información utilizando lógica booleana o relacional como OR,AND,>=, < o LIKE que permite hacer búsquedas)
 
 SELECT  *  Consulta todas las columnas
+
 FROM nombre_tabla Abreviatura
+
 WHERE 
 
 SELECT Abreviatura.columna
+
 FROM nombre_tabla Abreviatura
+
 WHERE (Abreviatura.columnaX== 'Y' OR Abreviatura.columnaH== 'Z' AND Abreviatura.columnaP== 'K')
 
 EJ:
@@ -157,6 +163,7 @@ INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('El
 SELECT *
 FROM generos gen, peliculas pel
 WHERE pel.genero = gen.id
+
 
 
 
