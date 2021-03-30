@@ -50,6 +50,7 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 - Para direccionar la base de datos de MySQL a nuestro equipo cambiamos el *host* de la siguiente manera
 
 *config.vm.network "forwarded_port", guest: 80, host: 8080*
+
 *config.vm.network "forwarded_port", guest: 3306, host: 3309*
 
 - Vagrant halt
@@ -71,10 +72,10 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 
 ![image](https://user-images.githubusercontent.com/64289042/112910284-ae71ae00-90b8-11eb-9079-964e20a877d1.png)
 
- y en la opción de contraseña : password
+ y en la opción de contraseña coloque: *password*
  - Dar clic derecho sobre la nueva conexión -> herramientas -> restore database ->  buscar el archivo .sql del workbench
 
-**Instrucciones de inserción, actualización y borrado en la base de datos**
+# **Instrucciones de inserción, actualización,consulta y borrado en la base de datos**
 
 - ## **1. Inserción:**
 
