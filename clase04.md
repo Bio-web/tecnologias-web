@@ -124,8 +124,7 @@ Ej:
 - **SELECT** (Hace referencia a las columnas)
 - **FROM**  (Hace referencia a las tablas)
 - **WHERE**  (Permite filtrar información utilizando lógica booleana o relacional como OR,AND,>=, < o LIKE que permite hacer búsquedas)
-
-- **SELECT**  *  Consulta todas las columnas o Abreviatura.Columna
+* **SELECT**  *  Consulta todas las columnas o Abreviatura.Columna
 - **FROM** nombre_tabla Abreviatura
 - **WHERE** Abreviatura.columnaX== 'Y '
 
