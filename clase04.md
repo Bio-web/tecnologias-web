@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bases de datos MySQL
+title: Bases de datos implmentados en MySQL
 author: Angie Dahiana Vargas Serna
 date: 2021-03-27
 ---
