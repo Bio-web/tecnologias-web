@@ -136,27 +136,27 @@ Ej:
   **WHERE** (pers.nombres = 'Juan Felipe' **OR** pers.ciudad = 'Bello' **AND** pers.nombres LIKE 'Juan%')
 
 
-2. pers.nombres LIKE  %Juan busca todos los que terminen por Juan
+2. pers.nombres **LIKE**  %Juan busca todos los que terminen por Juan
 
-   pers.nombres LIKE  Juan% busca todos los que empiezan por Juan
+   pers.nombres **LIKE**  Juan% busca todos los que empiezan por Juan
    
-   pers.nombres LIKE Ju%an% busca todos los que empiezan por Ju o Juan 
+   pers.nombres **LIKE** Ju%an% busca todos los que empiezan por Ju o Juan 
 
 **Para ilustrar la relación entre el id de dos tablas**
 
-- INSERT INTO generos(nombre, descripcion) VALUES ('comedia','Peliculas graciosas');
-- INSERT INTO generos(nombre, descripcion) VALUES ('terror','Peliculas que dan miedo');
-- INSERT INTO generos(nombre, descripcion) VALUES ('romantica','Peliculas sobre amor');
+- **INSERT INTO** generos(nombre, descripcion) **VALUES** ('comedia','Peliculas graciosas');
+- **INSERT INTO** generos(nombre, descripcion) **VALUES** ('terror','Peliculas que dan miedo');
+- **INSERT INTO** generos(nombre, descripcion) **VALUES** ('romantica','Peliculas sobre amor');
 
-- INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('El profesor chiflado','asdd',1995,'resumen',1);
-- INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('Chicas rubias','rewr',2003,'resumen',1);
-- INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('El conjuro','asdd',2012,'resumen',2);
-- INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('Amor ciego','trer',2001,'resumen',3);
-- INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('El stand de los besos','sdffs',2019,'resumen',3);
+- **INSERT INTO** peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) **VALUES** ('El profesor chiflado','asdd',1995,'resumen',1);
+- **INSERT INTO** peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) **VALUES** ('Chicas rubias','rewr',2003,'resumen',1);
+- **INSERT INTO** peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) **VALUES** ('El conjuro','asdd',2012,'resumen',2);
+- **INSERT INTO** peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) **VALUES** ('Amor ciego','trer',2001,'resumen',3);
+- **INSERT INTO** peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) **VALUES** ('El stand de los besos','sdffs',2019,'resumen',3);
 
-SELECT *
-FROM generos gen, peliculas pel
-WHERE pel.genero = gen.id
+**SELECT** *
+**FROM** generos gen, peliculas pel
+**WHERE** pel.genero = gen.id
 
 
 
