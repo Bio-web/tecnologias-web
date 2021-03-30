@@ -118,10 +118,44 @@ Ej:
 Ej:
 **DELETE FROM** categorias **WHERE** nombre = "Nueva categoría";
 
+- ## **4. Consultar** 
 
+**SELECT** (Hace referencia a las columnas)
+**FROM**  (Hace referencia a las tablas)
+**WHERE**  (Permite filtrar información utilizando lógica booleana como OR,AND o LIKE que permite hacer búsquedas)
 
+SELECT  *  Consulta todas las columnas
+FROM nombre_tabla Abreviatura
+WHERE 
 
+SELECT Abreviatura.columna
+FROM nombre_tabla Abreviatura
+WHERE (Abreviatura.columnaX== 'Y' OR Abreviatura.columnaH== 'Z' AND Abreviatura.columnaP== 'K')
 
+EJ:
+SELECT pers.name
+FROM personas pers
+WHERE (pers.nombres = 'Juan Felipe' OR pers.ciudad = 'Bello' AND pers.nombres LIKE 'Juan%')
+
+pers.nombres LIKE  %Juan busca todos los que terminen por Juan
+pers.nombres LIKE  Juan% busca todos los que empiezan por Juan
+pers.nombres LIKE Ju%an% busca todos los que empiezan por Ju o Juan 
+
+**Para ilustrar la relación entre el id de dos tablas**
+
+INSERT INTO generos(nombre, descripcion) VALUES ('comedia','Peliculas graciosas');
+INSERT INTO generos(nombre, descripcion) VALUES ('terror','Peliculas que dan miedo');
+INSERT INTO generos(nombre, descripcion) VALUES ('romantica','Peliculas sobre amor');
+
+INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('El profesor chiflado','asdd',1995,'resumen',1);
+INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('Chicas rubias','rewr',2003,'resumen',1);
+INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('El conjuro','asdd',2012,'resumen',2);
+INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('Amor ciego','trer',2001,'resumen',3);
+INSERT INTO peliculas(nombre, imdb, anio_lanzamiento,resumen,genero) VALUES ('El stand de los besos','sdffs',2019,'resumen',3);
+
+SELECT *
+FROM generos gen, peliculas pel
+WHERE pel.genero = gen.id
 
 
 
