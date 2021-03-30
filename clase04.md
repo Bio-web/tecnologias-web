@@ -4,6 +4,10 @@ title: Bases de datos implmentados en MySQL
 author: Angie Dahiana Vargas Serna
 date: 2021-03-27
 ---
+
+En el presente resumen se encontrará las bases y generalidades para implementar una base de datos utilizando MySQL en donde se desgloza los comandotas más relevantes y los pasos a seguir en la instalación, configuración y desarrollo.
+
+
  # WORKBENCH
  
 Para crear un nuevo modelo se deben hacer los siguientes pasos:
