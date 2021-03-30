@@ -125,15 +125,15 @@ Ej:
 - **FROM**  (Hace referencia a las tablas)
 - **WHERE**  (Permite filtrar información utilizando lógica booleana o relacional como OR,AND,>=, < o LIKE que permite hacer búsquedas)
 * **SELECT**  *  Consulta todas las columnas o Abreviatura.Columna
-- **FROM** nombre_tabla Abreviatura
-- **WHERE** Abreviatura.columnaX== 'Y '
+* **FROM** nombre_tabla Abreviatura
+* **WHERE** Abreviatura.columnaX== 'Y '
 
 ### Ejemplos
-1. SELECT pers.named
+1. **SELECT** pers.named
 
-   FROM personas pers
+   **FROM** personas pers
    
-   WHERE (pers.nombres = 'Juan Felipe' OR pers.ciudad = 'Bello' AND pers.nombres LIKE 'Juan%')
+  **WHERE** (pers.nombres = 'Juan Felipe' **OR** pers.ciudad = 'Bello' **AND** pers.nombres LIKE 'Juan%')
 
 
 2. pers.nombres LIKE  %Juan busca todos los que terminen por Juan
