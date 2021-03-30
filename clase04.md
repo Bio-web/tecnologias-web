@@ -128,14 +128,15 @@ Ej:
   - SELECT  *  Consulta todas las columnas
   - FROM nombre_tabla Abreviatura
   - WHERE Abreviatura.columnaX== 'Y'
+  
+ - SELECT Abreviatura.columna
+ - FROM nombre_tabla Abreviatura
+ - WHERE (Abreviatura.columnaX== 'Y' OR Abreviatura.columnaH== 'Z' AND Abreviatura.columnaP== 'K')
 
-- SELECT Abreviatura.columna
-- FROM nombre_tabla Abreviatura
-- WHERE (Abreviatura.columnaX== 'Y' OR Abreviatura.columnaH== 'Z' AND Abreviatura.columnaP== 'K')
-EJ:
-SELECT pers.name
-FROM personas pers
-WHERE (pers.nombres = 'Juan Felipe' OR pers.ciudad = 'Bello' AND pers.nombres LIKE 'Juan%')
+
+ - SELECT pers.name
+ - FROM personas pers
+ - WHERE (pers.nombres = 'Juan Felipe' OR pers.ciudad = 'Bello' AND pers.nombres LIKE 'Juan%')
 
 pers.nombres LIKE  %Juan busca todos los que terminen por Juan
 pers.nombres LIKE  Juan% busca todos los que empiezan por Juan
