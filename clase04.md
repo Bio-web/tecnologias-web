@@ -131,12 +131,16 @@ Ej:
 
 ### Ejemplos
 1. SELECT pers.named
+
    FROM personas pers
+   
    WHERE (pers.nombres = 'Juan Felipe' OR pers.ciudad = 'Bello' AND pers.nombres LIKE 'Juan%')
 
 
 2. pers.nombres LIKE  %Juan busca todos los que terminen por Juan
+
    pers.nombres LIKE  Juan% busca todos los que empiezan por Juan
+   
    pers.nombres LIKE Ju%an% busca todos los que empiezan por Ju o Juan 
 
 **Para ilustrar la relación entre el id de dos tablas**
