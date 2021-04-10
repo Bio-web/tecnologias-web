@@ -63,7 +63,7 @@ En el campo **data_type** se selecciona el tipo de variable y el número de bits
 - sudo usermod -aG docker vagrant 
 - mkdir dbdata
 - sudo systemctl stop mysql(Por si hay otro MySQL instalado)
-- docker run -ti --rm --name mysqldb -d -p 3306:3306 -v $PWD/dbdata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=peliculas -e MYSQL_USER=peliculas -e MYSQL_PASSWORD=password mysql:5.7
+- `docker run -ti --rm --name mysqldb -d -p 3306:3306 -v $PWD/dbdata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=peliculas -e MYSQL_USER=peliculas -e MYSQL_PASSWORD=password mysql:5.7`
 - docker star mysqldb (Correr los contenedores)
 - docker ps (Lista los contenedores que están corriendo)
 - docker stop mysqldb (Detiene los contenedores)
