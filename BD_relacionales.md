@@ -11,6 +11,17 @@ Logging
 
 2. Diagrama entidad relación construido usando un software de diseño
 como MySQL Workbench. 
+
+## Diagrama de Inventarios.
+
+![image](https://user-images.githubusercontent.com/80167676/114286082-5d9b7700-9a21-11eb-940f-0c2e604fe60d.png)  
+
+## Diagrama de logging.
+
+![image](https://user-images.githubusercontent.com/80167676/114286102-7ad04580-9a21-11eb-8977-b27caeee9013.png)  
+
+
+
 3. Diccionario de datos: Definición de tablas y campos (nombre, tipo de dato), explicación del mismo y su necesidad en el sistema de información.
 
 ---
