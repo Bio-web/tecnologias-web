@@ -17,7 +17,7 @@ como MySQL Workbench.
 
 Estas tres tablas se encargan del login a la aplicación de inventarios.
 
-# Usuarios
+## Usuarios
 Esta tabla contiene la información de los usuarios con acceso al inventario.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285314-ea433680-9a1b-11eb-86cc-17396284bec9.png)  
@@ -26,7 +26,7 @@ Esta tabla contiene la información de los usuarios con acceso al inventario.
 - nombreUsuario: Nombre completo del usuario.
 - passUsuario: Contraseña de acceso al sistema.
 
-# Permisos
+## Permisos
 Esta tabla contiene la información de los permisos que puede tener un usuario.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285366-31312c00-9a1c-11eb-92e7-1035aa856272.png)  
@@ -34,7 +34,7 @@ Esta tabla contiene la información de los permisos que puede tener un usuario.
 - id: Campo autogenerado que identifica cada tipo de permiso.
 - tipoPermiso: Nombre del permiso(Agregar, Eliminar y Consultar).
 
-# Permisos por usuario
+## Permisos por usuario
 Relaciona a los usuarios con los permisos
 
 ![image](https://user-images.githubusercontent.com/80167676/114285370-3aba9400-9a1c-11eb-8766-a691866aff52.png)  
@@ -45,9 +45,9 @@ Relaciona a los usuarios con los permisos
 
 
 ---
-Estas tablas representan la estructura de la base de datos.
+#Estas tablas representan la estructura de la base de datos.
 
-# Inventario
+## Inventario
 Tabla principal donde se recopila información de los diferentes equipos médicos.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285381-4c03a080-9a1c-11eb-8e3f-29e96c4ab8f8.png)  
@@ -63,7 +63,7 @@ Tabla principal donde se recopila información de los diferentes equipos médico
 - ubicacionDispositivo: Correspone al id en la tabla ubicacionDispositivo.
 - registroInvima: Registro obligatorio para algunos equipos médicos.
 
-# Marcas
+## Marcas
 Tabla que contiene las marcas de los dispositivos médicos.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285387-54f47200-9a1c-11eb-9b4a-832ed70da6ce.png)  
@@ -71,7 +71,7 @@ Tabla que contiene las marcas de los dispositivos médicos.
 - id: Campo autogenerado que identifica la marca.
 - Nombre: Nombre de la marca.
 
-# Modelos
+## Modelos
 Tabla que contiene los módelos de los dispositivos médicos.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285402-705f7d00-9a1c-11eb-8538-ef70dddaa954.png)  
@@ -81,7 +81,7 @@ Tabla que contiene los módelos de los dispositivos médicos.
 - Modelo: Nombre del módelo.
 
 
-# Tipo de riesgo
+## Tipo de riesgo
 Tabla que contiene los tipos de riesgo según la legistlación Colombiana.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285409-7bb2a880-9a1c-11eb-8def-900998d66f26.png)  
@@ -89,7 +89,7 @@ Tabla que contiene los tipos de riesgo según la legistlación Colombiana.
 - id: Campo autogenerado que identifica el tipo de riesgo.
 - Nombre: Categoria según la legistlación Colombiana.
 
-# Tipo de funcionamiento
+## Tipo de funcionamiento
 Tabla que contiene el tipo de funcionamiento de los dispositivos médicos.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285411-82412000-9a1c-11eb-8667-9a993b57f718.png)  
@@ -97,7 +97,7 @@ Tabla que contiene el tipo de funcionamiento de los dispositivos médicos.
 - id: Campo autogenerado que identifica el tipo de funcionamiento.
 - Nombre: representa el tipo del funcionamiento(Eléctrico, mecánico y electromecánico).
 
-# Ubicacion dispositivo
+## Ubicacion dispositivo
 Tabla que contiene la ubicación de los dispositivos, según el piso y la habitación.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285415-8a995b00-9a1c-11eb-9c7e-5248abc45c63.png)  
@@ -106,7 +106,7 @@ Tabla que contiene la ubicación de los dispositivos, según el piso y la habita
 - Piso: Piso donde esta el dispositivo
 - Habitacion: Habitación en donde esta el dispositivo.
 
-# Proveedores
+## Proveedores
 Tabla que tiene información de los proveedores
 
 ![image](https://user-images.githubusercontent.com/80167676/114285417-938a2c80-9a1c-11eb-9616-f1896159f332.png)  
@@ -117,7 +117,7 @@ Tabla que tiene información de los proveedores
 - Direccion: Sede de venta del proveedor.
 - Email: Correo electrónico del contacto.
 
-# Marcas proveedor
+## Marcas proveedor
 Tabla que relaciona las marcas y los proveedores.
 
 ![image](https://user-images.githubusercontent.com/80167676/114285426-aac91a00-9a1c-11eb-816a-55f5fa7df3af.png)
