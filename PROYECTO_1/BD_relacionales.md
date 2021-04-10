@@ -18,9 +18,8 @@ Logging
 **permisos**
 - idPermisos
 - Tipo Permiso
-- consultar
-- Eliminar
-- Agregar
+
+
 
 Para el tipo de consulta, hay tres campos, consultar, eliminar o agregar, 1 indica que tiene dicho permiso y 0 no tiene permiso
 
@@ -36,6 +35,7 @@ Para el tipo de consulta, hay tres campos, consultar, eliminar o agregar, 1 indi
 - Proveedor 
 - Estado 1:  activo 0: Inactivo
 - Manteniemiento
+- ResgistroInvima
 
 **marcas**
 - idMarcas
