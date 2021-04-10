@@ -45,7 +45,9 @@ Relaciona a los usuarios con los permisos
 
 
 ---
-# Estas tablas representan la estructura de la base de datos.
+
+<h1><center>Estas tablas representan la estructura de la base de datos. text</center></h1>
+
 
 ## Inventario
 Tabla principal donde se recopila información de los diferentes equipos médicos.
