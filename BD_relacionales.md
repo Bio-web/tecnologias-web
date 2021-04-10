@@ -1,11 +1,10 @@
-**Trabajo 01**
+---
+layout: post
+title: Trabajo 01
+author: Santiago Henao Gonzalez, Santiago Gutierrez Pérez, Angie Dahiana Vargas Serna y Luisa María Zapata Saldarriaga 
+date: 2021-03-05
+---
 
-**Integrantes:**
-
-- Santiago Henao
-- Santiago Gutierrez Pérez
-- Angie Dahiana Vargas Serna
-- Luisa María Zapata Saldarriaga 
 
 1. Resumen de problema a solucionar (de nuevo)
 Logging 
