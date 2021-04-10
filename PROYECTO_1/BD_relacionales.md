@@ -1,5 +1,7 @@
 **Trabajo 01**
+
 **Integrantes:**
+
 - Santiago Henao
 - Santiago Gutierrez Pérez
 - Angie Dahiana Vargas Serna
