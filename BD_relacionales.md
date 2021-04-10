@@ -46,7 +46,7 @@ Relaciona a los usuarios con los permisos
 
 ---
 
-<h1><center>Estas tablas representan la estructura de la base de datos. text</center></h1>
+<h1><center>Estas tablas representan la estructura de la base de datos.</center></h1>
 
 
 ## Inventario
