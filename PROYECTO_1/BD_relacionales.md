@@ -10,14 +10,26 @@
 1. Resumen de problema a solucionar (de nuevo)
 Logging 
 
+2. Diagrama entidad relación construido usando un software de diseño
+como MySQL Workbench. 
+3. Diccionario de datos: Definición de tablas y campos (nombre, tipo de dato), explicación del mismo y su necesidad en el sistema de información.
+
+
 **usuarios**
--  id_usuarios
--  nombre_usuario
--  passUsario 
--
+
+| Usuarios ||
+|--|--|
+| id | INT |
+| nombreUsuario | varchar(255) |
+| passUsuario | varchar(45) |
+
+
 **permisos**
-- idPermisos
-- Tipo Permiso
+- id
+- tipoPermiso
+
+**permisos_usuario**
+- id
 
 
 
@@ -67,7 +79,3 @@ Para el tipo de consulta, hay tres campos, consultar, eliminar o agregar, 1 indi
 - Dirección
 
 marca tiene muchos modelos
-
-3. Diagrama entidad relación construido usando un software de diseño
-como MySQL Workbench. 
-3. Diccionario de datos: Definición de tablas y campos (nombre, tipo de dato), explicación del mismo y su necesidad en el sistema de información.
