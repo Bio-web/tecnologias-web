@@ -155,6 +155,6 @@ Tabla que relaciona las marcas y los proveedores.
 
 
 # Referencias
-1. Hospira PLUM A+, System Operating Manual. Tomado de:[https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf]
-2. Documentación oficial de MySQL Workbench. [https://dev.mysql.com/doc/workbench/en/]
+1. Hospira PLUM A+, System Operating Manual. Tomado de:[https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf](https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf)
+2. Documentación oficial de MySQL Workbench. [https://dev.mysql.com/doc/workbench/en/](https://dev.mysql.com/doc/workbench/en/)
 
