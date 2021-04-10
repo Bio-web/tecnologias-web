@@ -14,13 +14,8 @@ como MySQL Workbench.
 3. Diccionario de datos: Definición de tablas y campos (nombre, tipo de dato), explicación del mismo y su necesidad en el sistema de información.
 
 
-**usuarios**
+![image](https://user-images.githubusercontent.com/80167676/114285265-946e8e80-9a1b-11eb-8329-c3362ec8557e.png)
 
-| Usuarios ||
-|--|--|
-| id | INT |
-| nombreUsuario | varchar(255) |
-| passUsuario | varchar(45) |
 
 
 **permisos**
