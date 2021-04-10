@@ -5,7 +5,7 @@ author: Santiago Henao Gonzalez, Santiago Gutierrez Pérez, Angie Dahiana Vargas
 date: 2021-04-10
 ---
 
-# introducción
+# Introducción
 
 Las instituciones hospitalarias requieren mantener un control estricto de los dispositivos médicos, por lo tanto se debe tener almacenada la información respecto a estos de manera ordenada y concisa, para solventar este problema se definen bases de datos que contienen los datos mas relevantes de cada dispositivo. Esto resulta útil para definir agendas de mantenimieno preventivo, control metrológico y tecnovigilancia, tambien para tener fácil acceso a la información de suministros ofrecidos por los proveedores en caso de requerir algún tipo de servicio.
 
