@@ -78,7 +78,7 @@ También existen otros operadores para modificar de manera rápida el valor de u
 
 A continuación se muestra el código en respuesta al primer desafío de programación en JavaScript.
 
-```
+```js
 // Prueba 1
 
 let pesoJuan = 92;
