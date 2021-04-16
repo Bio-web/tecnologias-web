@@ -100,7 +100,7 @@ console.log(marcosMayorIMC);
  alturaMarcos =  1.88;
 
  marcosMayorIMC = marcosIMC > juanIMC;
- console.log(marcosMayorIMC); <\code>
+ console.log(marcosMayorIMC); </code>
  
  
  # Strings y Plantillas Literales
