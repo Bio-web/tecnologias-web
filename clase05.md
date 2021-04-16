@@ -241,6 +241,8 @@ else
     console.log(`Nigún equipo cumple con los requisitos para ganar o empatar`);
 }
 
+console.log('\n');
+
 // Prueba 2
 
 puntajeDelfines = (97 + 112 + 101)/3;
@@ -263,6 +265,8 @@ else
     console.log(`Nigún equipo cumple con los requisitos para ganar o empatar`);
 }
 
+console.log('\n');
+
 // Prueba 3
 
 puntajeDelfines = (97 + 112 + 101)/3;
@@ -284,4 +288,135 @@ else
 {
     console.log(`Nigún equipo cumple con los requisitos para ganar o empatar`);
 }
+```
+
+# Sentencia Switch
+
+La sentencia switch permite crear condicionales basados en el valor de una variable de manera más cómoda y breve que tratando de hacerlo usando sentencias if/else. En el ejemplo se muestra su uso:
+
+```
+const edad = 11;
+
+switch (edad) {
+    case 10:
+    case 11:
+    case 12:
+        console.log('es un niño');
+        break;
+    case 15:
+        console.log('es un adolescente');
+        break;
+    case 18:
+        console.log('es un adulto');
+        break;
+    default:
+        console.log('')
+}
+```
+
+# Operador Condicional o Ternario
+
+El operador ternario permite escribir condicionales cortos de manera resumida dando opciones deacuerdo a si un la condición es verdadera o falsa. A continuación se muestra su funcionamiento.
+
+```
+const edad = 11;
+
+const respuesta = edad > 18 ? 'puede conducir' : 'no puede conducir';
+console.log(respuesta);
+```
+
+# Challenge 4
+```
+// Prueba 1
+
+let factura = 275;
+
+let propina = ((factura >= 50) && (factura <= 300)) ? factura*0.15 : factura*0.2;
+
+console.log(`El valor de la factura es ${factura}, la propina es ${propina} y el valor total es ${propina+factura}`);
+
+console.log('\n');
+
+// Prueba 2
+
+factura = 40;
+
+propina = ((factura >= 50) && (factura <= 300)) ? factura*0.15 : factura*0.2;
+
+console.log(`El valor de la factura es ${factura}, la propina es ${propina} y el valor total es ${propina+factura}`);
+
+console.log('\n');
+
+// Prueba 3
+
+factura = 430;
+
+propina = ((factura >= 50) && (factura <= 300)) ? factura*0.15 : factura*0.2;
+
+console.log(`El valor de la factura es ${factura}, la propina es ${propina} y el valor total es ${propina+factura}`);
+```
+
+# Funciones
+
+Las funciones son segmentos de código que se planea reciclar para hacer más fácil usarlos cuando sean necesarios de nuevo. Hay dos maneras de declarar estas funciones en JavaScript como se muestra a continuación:
+
+```
+// Declaración convencional
+
+function calcEdad(anioNacimiento) 
+{
+    return 2020 - anioNacimiento;
+}
+
+// función como expresión
+
+const calcEdad2 = function (anioNacimiento) 
+{
+    return 2020 - anioNacimiento;
+}
+```
+
+Cabe mencionar que el comando "return" es el que indica que valor va a retornar la función cuando esta sea ejecutada. No todas las funciones tienen que retornar valores por lo que esta sentencia no siempre está presente en una función. Algo más que se debe tener en cuenta es que las funciones cuadno son decalradas como expresión no pueden ser llamadas antes de su declaración a diferencia de las declaradas convencionalmente. 
+
+# Fucniones Arrow
+
+Las funciones arrow son otra forma de declarar funciones en JavaScript. A continuación se muestra al manera de crear funciones arrow cortas de una sola línea o con varias sentencias dentro de ellas:
+
+```
+const calcEdad3 = anioNacimiento => 2020 - anioNacimiento;
+
+console.log(calcEdad3(1990));
+
+const calcEdad4 = (anioNacimiento, primerNombre) => {
+    const edad = `La edad de ${primerNombre} es ${2020 - anioNacimiento}`;
+    return edad;
+}
+```
+
+# Challenge 5
+
+```
+// Prueba 1
+
+const calcPromedio = (puntuacion1, puntuacion2, puntuacion3) => (puntuacion1 + puntuacion2 + puntuacion3)/3;
+
+let puntajeDelfines = calcPromedio(44, 23, 71);
+let puntajeKoalas = calcPromedio(65, 54, 49);
+
+const verificarGanador = function(promDelfines, promKoalas)
+{
+    if(promDelfines > 2*promKoalas) console.log(`Los Delfines ganan (${promDelfines} contra ${promKoalas})`);
+    else if(promKoalas > 2*promDelfines) console.log(`Los Koalas ganan (${promKoalas} contra ${promDelfines})`);
+    else console.log('Ningún equipo gana');
+    console.log('\n');
+}
+
+verificarGanador(puntajeDelfines, puntajeKoalas);
+
+// Prueba 2
+
+puntajeDelfines = calcPromedio(85, 54, 41);
+puntajeKoalas = calcPromedio(23, 34, 27);
+
+verificarGanador(puntajeDelfines, puntajeKoalas)
 ```
