@@ -418,5 +418,5 @@ verificarGanador(puntajeDelfines, puntajeKoalas);
 puntajeDelfines = calcPromedio(85, 54, 41);
 puntajeKoalas = calcPromedio(23, 34, 27);
 
-verificarGanador(puntajeDelfines, puntajeKoalas)
+verificarGanador(puntajeDelfines, puntajeKoalas);
 ```
