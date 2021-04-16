@@ -90,18 +90,15 @@ let marcosIMC = pesoMarcos/(alturaMarcos**2);
 let juanIMC = pesoJuan/(alturaJuan**2);
 
 let marcosMayorIMC = marcosIMC > juanIMC;
-console.log(marcosMayorIMC);
-
 
 // Prueba 2
 
- pesoJuan = 85;
- pesoMarcos = 95;
- alturaJuan = 1.76;
- alturaMarcos =  1.88;
+pesoJuan = 85;
+pesoMarcos = 95;
+alturaJuan = 1.76;
+alturaMarcos =  1.88;
 
- marcosMayorIMC = marcosIMC > juanIMC;
- console.log(marcosMayorIMC);
+marcosMayorIMC = marcosIMC > juanIMC;
  ```
  
  
@@ -118,4 +115,60 @@ Otra manera de crear strings es por medio de las plantillas literales las cuales
 ``const templateLiteral = `Mi primer nombre es ${primerNombre} y mi segundo nombre es ${segundoNombre}`;
 console.log(templateLiteral);``
  
+ Se pueden crear strings con varias lineas dependiendo de si se usan strings normales o plantillas literales de la siguiente manera:
  
+ ```
+ console.log('linea 1 \n\ linea 2');
+
+console.log(`linea 1
+linea 2`);
+```
+
+# Condicionales: if / else
+
+Usando la sentencia if/ese se crean condicionales los cuales dependen de un valor lógico entregado como parámetro, estos condicionales requieren estar encerrados en llaves "{}" cuando son de más de una linea. A continuación se muestra un ejemplo de estos:
+
+```
+const edad = 17;
+
+if (edad >= 18) {
+    console.log('Puedo obtener la licencia de conducción');
+} else if (edad >= 17) {
+    console.log('puede aprender aconducir pero no obtendra licencia aún');
+} else {
+    console.log('aún no puedo aprender a conducir');
+}
+```
+
+# Challenge 2
+
+```
+// Prueba 1
+
+let pesoJuan = 92;
+let pesoMarcos = 78;
+let alturaJuan = 1.95;
+let alturaMarcos =  1.69;
+
+let marcosIMC = pesoMarcos/(alturaMarcos**2);
+let juanIMC = pesoJuan/(alturaJuan**2);
+
+let marcosMayorIMC = marcosIMC > juanIMC;
+
+console.log('Prueba 1 \n')
+if(marcosMayorIMC)console.log(`¡El IMC de Marcos (${marcosIMC}) es más alto que el de Juan (${juanIMC})!`);
+else console.log(`¡El IMC de Juan (${juanIMC}) es más alto que el de Marcos (${marcosIMC})!`);
+
+// Prueba 2
+
+pesoJuan = 85;
+pesoMarcos = 95;
+alturaJuan = 1.76;
+alturaMarcos =  1.88;
+
+marcosMayorIMC = marcosIMC > juanIMC;
+
+console.log('\nPrueba 2 \n')
+if(marcosMayorIMC)console.log(`¡El IMC de Marcos (${marcosIMC}) es más alto que el de Juan (${juanIMC})!`);
+else console.log(`¡El IMC de Juan (${juanIMC}) es más alto que el de Marcos (${marcosIMC})!`);
+```
