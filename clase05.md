@@ -89,6 +89,7 @@ let marcosIMC = pesoMarcos/(alturaMarcos**2);
 let juanIMC = pesoJuan/(alturaJuan**2);
 
 let marcosMayorIMC = marcosIMC > juanIMC;
+console.log(marcosMayorIMC);
 
 
 // Prueba 2
@@ -98,8 +99,21 @@ let marcosMayorIMC = marcosIMC > juanIMC;
  alturaJuan = 1.76;
  alturaMarcos =  1.88;
 
- marcosMayorIMC = marcosIMC > juanIMC;`
+ marcosMayorIMC = marcosIMC > juanIMC;
+ console.log(marcosMayorIMC);`
+ 
  
  # Strings y Plantillas Literales
  
- La creación de strings o cadenas de caracteres en JavaScript sólo requiere que estas sean envueltas en comillas simples o dobles siempre y cuando se usen las mismas para abrir y cerrar la cadena. El operador de concatenación es el de suma "+".
+ La creación de strings o cadenas de caracteres en JavaScript sólo requiere que estas sean envueltas en comillas simples o dobles siempre y cuando se usen las mismas para abrir y cerrar la cadena. El operador de concatenación es el de suma "+". A continuación se muestra un ejemplo de su creación y uso, en el que también se hace uso de la función "console.log" para mostrar los resultados obtenidos:
+ 
+ `const primerNombre = 'Andrés';
+const segundoNombre = 'Felipe';
+console.log(primerNombre + ' ' + segundoNombre);`
+
+Otra manera de crear strings es por medio de las plantillas literales las cuales se encierran con los símbolos \`\` y dentro de ellos se puede llamar el valor de las variables usando el comando ${nombreVariable} dentro de la plantilla, como se muestra en el siguiente ejemplo:
+
+``const templateLiteral = `Mi primer nombre es ${primerNombre} y mi segundo nombre es ${segundoNombre}`;
+console.log(templateLiteral);``
+ 
+ 
