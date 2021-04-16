@@ -51,9 +51,55 @@ El comando `typeof` es útil para obtener el tipo de dato de una variable en esp
 
 Para inicializar variables en JavaScript se disponen de tres comandos:
 
-- `let nombreVariable` es cual crea varibales cuyo valor puede ser modificado posteriormente.
+- `let nombreVariable` es cual crea variables cuyo valor puede ser modificado posteriormente.
 - `const nombreVariable` el cual crea variables cuyo valor no se puede cambiar una vez inicializada.
 - `var nombreVariable` es un comando poco usado ya que es poco eficiente.
 
-# Operadores básicos
+# Operadores Básicos
 
+JavaScript cuenta con los operadores matemáticos básicos como lo son +, -, * , \/. Estos operadores aritméticos se pueden usar en operaciones entre variables e incluso en asignaciones como se muestra a continuación.
+
+`const year = 2020;
+const edadAndres = 2020 - 1990;`
+
+Cabe mencionar que para la operación de potenciación se cuenta con el operador \**.
+
+También se cuenta con los operadores de comparación básicos: >, >=, <, <=.
+
+# Operadores de Asignación
+
+Se pueden usar ciertos operadores para de manera breve modificar el valor de variables con operaciones básicas. Naturalmente hay uno de ellos para cada operación básica. Ellos son: +=, -=, *=, \/=.
+
+Su uso sería del estilo `variable += 10` que correspondería a sumarle 10 al valor de "variable" y asignarselo a "variable".
+
+También existen otros operadores para modificar de manera rápida el valor de una variable y estos son ++ y -- que respectivamente suman y restan 1 a la variable a la que son aplicados y le asignan el nuevo valor a la variable.
+
+# Challenge 1
+
+A continuación se muestra el código en respuesta al primer desafío de programación en JavaScript.
+
+`// Prueba 1
+
+let pesoJuan = 92;
+let pesoMarcos = 78;
+let alturaJuan = 1.95;
+let alturaMarcos =  1.69;
+
+let marcosIMC = pesoMarcos/(alturaMarcos**2);
+let juanIMC = pesoJuan/(alturaJuan**2);
+
+let marcosMayorIMC = marcosIMC > juanIMC;
+
+
+// Prueba 2
+
+ pesoJuan = 85;
+ pesoMarcos = 95;
+ alturaJuan = 1.76;
+ alturaMarcos =  1.88;
+
+ marcosMayorIMC = marcosIMC > juanIMC;`
+ 
+ # Strings y Plantillas Literales
+ 
+ La creación de strings o cadenas de caracteres en JavaScript sólo requiere que estas sean envueltas en comillas simples o dobles siempre y cuando se usen las mismas para abrir y cerrar la cadena. El operador de concatenación es el de suma "+".
