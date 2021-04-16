@@ -78,7 +78,7 @@ También existen otros operadores para modificar de manera rápida el valor de u
 
 A continuación se muestra el código en respuesta al primer desafío de programación en JavaScript.
 
-`// Prueba 1
+`` // Prueba 1
 
 let pesoJuan = 92;
 let pesoMarcos = 78;
@@ -100,7 +100,7 @@ console.log(marcosMayorIMC);
  alturaMarcos =  1.88;
 
  marcosMayorIMC = marcosIMC > juanIMC;
- console.log(marcosMayorIMC);`
+ console.log(marcosMayorIMC); ``
  
  
  # Strings y Plantillas Literales
