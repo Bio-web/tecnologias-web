@@ -121,7 +121,7 @@ console.log(templateLiteral);``
  
  Se pueden crear strings con varias lineas dependiendo de si se usan strings normales o plantillas literales de la siguiente manera:
  
- ```
+ ```js
  console.log('linea 1 \n\ linea 2');
 
 console.log(`linea 1
@@ -132,7 +132,7 @@ linea 2`);
 
 Usando la sentencia if/ese se crean condicionales los cuales dependen de un valor lógico entregado como parámetro, estos condicionales requieren estar encerrados en llaves "{}" cuando son de más de una linea. A continuación se muestra un ejemplo de estos:
 
-```
+```js
 const edad = 17;
 
 if (edad >= 18) {
@@ -146,7 +146,7 @@ if (edad >= 18) {
 
 # Challenge 2
 
-```
+```js
 // Prueba 1
 
 let pesoJuan = 92;
@@ -184,7 +184,7 @@ else console.log(`¡El IMC de Juan (${juanIMC}) es más alto que el de Marcos ($
 
 Aunque JavaScript elige el tipo de dato más adecuado al momento de inicializar una variable, es posible modificar dicho tipo usando funciones proporcionadas por el mismo JavaScript. También cabe destacar que en ciertas situaciones cuando se realicen determinadas operaciones usando variables JavaScript determinará que es necesario realizar ciertos cambios de tipo de dato forzado para poder llevar a cabo el proceso solicitado, a esto se le llama coerción, podemos observar ejemplos de dichas situaciones a continuación.
 
-```
+```js
 // Ejemplos de conversión de datos
 const year = '2020';
 console.log(Number(year));
@@ -218,7 +218,7 @@ Los operadores lógicos básicos estan disponibles en JavaScript correspondiendo
 
 # Challenge 3
 
-```
+```js
 // Prueba 1
 
 let puntajeDelfines = (96 + 108 + 89)/3;
@@ -294,7 +294,7 @@ else
 
 La sentencia switch permite crear condicionales basados en el valor de una variable de manera más cómoda y breve que tratando de hacerlo usando sentencias if/else. En el ejemplo se muestra su uso:
 
-```
+```js
 const edad = 11;
 
 switch (edad) {
@@ -318,7 +318,7 @@ switch (edad) {
 
 El operador ternario permite escribir condicionales cortos de manera resumida dando opciones deacuerdo a si un la condición es verdadera o falsa. A continuación se muestra su funcionamiento.
 
-```
+```js
 const edad = 11;
 
 const respuesta = edad > 18 ? 'puede conducir' : 'no puede conducir';
@@ -326,7 +326,7 @@ console.log(respuesta);
 ```
 
 # Challenge 4
-```
+```js
 // Prueba 1
 
 let factura = 275;
@@ -360,7 +360,7 @@ console.log(`El valor de la factura es ${factura}, la propina es ${propina} y el
 
 Las funciones son segmentos de código que se planea reciclar para hacer más fácil usarlos cuando sean necesarios de nuevo. Hay dos maneras de declarar estas funciones en JavaScript como se muestra a continuación:
 
-```
+```js
 // Declaración convencional
 
 function calcEdad(anioNacimiento) 
@@ -382,7 +382,7 @@ Cabe mencionar que el comando "return" es el que indica que valor va a retornar 
 
 Las funciones arrow son otra forma de declarar funciones en JavaScript. A continuación se muestra al manera de crear funciones arrow cortas de una sola línea o con varias sentencias dentro de ellas:
 
-```
+```js
 const calcEdad3 = anioNacimiento => 2020 - anioNacimiento;
 
 console.log(calcEdad3(1990));
@@ -395,7 +395,7 @@ const calcEdad4 = (anioNacimiento, primerNombre) => {
 
 # Challenge 5
 
-```
+```js
 // Prueba 1
 
 const calcPromedio = (puntuacion1, puntuacion2, puntuacion3) => (puntuacion1 + puntuacion2 + puntuacion3)/3;
