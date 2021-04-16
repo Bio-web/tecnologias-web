@@ -112,7 +112,7 @@ marcosMayorIMC = marcosIMC > juanIMC;
  
  `const primerNombre = 'Andrés';
 const segundoNombre = 'Felipe';
-console.log(primerNombre + ' ' + segundoNombre);`js
+console.log(primerNombre + ' ' + segundoNombre);`
 
 Otra manera de crear strings es por medio de las plantillas literales las cuales se encierran con los símbolos \`\` y dentro de ellos se puede llamar el valor de las variables usando el comando ${nombreVariable} dentro de la plantilla, como se muestra en el siguiente ejemplo:
 
