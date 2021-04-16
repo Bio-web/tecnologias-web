@@ -179,3 +179,109 @@ console.log('\nPrueba 2 \n')
 if(marcosMayorIMC)console.log(`¡El IMC de Marcos (${marcosIMC}) es más alto que el de Juan (${juanIMC})!`);
 else console.log(`¡El IMC de Juan (${juanIMC}) es más alto que el de Marcos (${marcosIMC})!`);
 ```
+
+# Conversión de tipos y Coerción
+
+Aunque JavaScript elige el tipo de dato más adecuado al momento de inicializar una variable, es posible modificar dicho tipo usando funciones proporcionadas por el mismo JavaScript. También cabe destacar que en ciertas situaciones cuando se realicen determinadas operaciones usando variables JavaScript determinará que es necesario realizar ciertos cambios de tipo de dato forzado para poder llevar a cabo el proceso solicitado, a esto se le llama coerción, podemos observar ejemplos de dichas situaciones a continuación.
+
+```
+// Ejemplos de conversión de datos
+const year = '2020';
+console.log(Number(year));
+const edad = 30;
+const edadString = String(edad);
+console.log(edadString);
+console.log(typeof edadString);
+
+// Coerción
+console.log('Yo tengo ' + 30 + ' años');// El 30 pasa a ser un string
+console.log('10' + '10');
+console.log('10' + 3);
+console.log('100' / '5');// Convierte los strings en numeros
+console.log('100' > '5');
+console.log(100 > 5);
+console.log('100' < '5');
+console.log('100' > 5);
+```
+
+# Valores Truthy y Falsy
+
+Todos los tipos de dato tienen un valor de verdad intrínseco dependiendo de su valor y su tipo, de manera que pueden ser usados en condicionales, los valores que tienen atado un valor de verdad "falsy" son los tipos undefined y null, los numéricos con valor 0,los strings vacíos '' y NaN. Todos los demás valores y tipos tendrán un valor "truty" si son usados en operaciones lógicas.
+
+# Operadores de Igualdad
+
+JavaScript cuenta con los operadores lógicos básicos de igualdades == y !=. Cabe destacar que para evitar que se causen errores debido a la coerción se puede usar los operadores === y !== los cuales evitan que haya cualquier conversión de tipo de dato forzada, de manera que se requiere que los datos sean del mismo tipo originalmente.
+
+# Operadores Lógicos
+
+Los operadores lógicos básicos estan disponibles en JavaScript correspondiendo "&&" a la operación "and", "||" a la operación "or" y "!" a la operación "not".
+
+# Challenge 3
+
+```
+// Prueba 1
+
+let puntajeDelfines = (96 + 108 + 89)/3;
+let puntajeKoalas = (88 + 91 + 110)/3;
+
+if((puntajeDelfines > puntajeKoalas) && (puntajeDelfines >= 100))
+{
+    console.log(`¡Los ganadores son los Delfines con (${puntajeDelfines}) puntos!`);
+}
+else if((puntajeKoalas > puntajeDelfines) && (puntajeKoalas >= 100))
+{
+    console.log(`¡Los ganadores son los Koalas con (${puntajeKoalas}) puntos!`);
+}
+else if((puntajeKoalas == puntajeDelfines) && (puntajeKoalas >= 100))
+{
+    console.log(`¡Ambos equipos quedan empatados con (${puntajeKoalas}) puntos!`);
+}
+else
+{
+    console.log(`Nigún equipo cumple con los requisitos para ganar o empatar`);
+}
+
+// Prueba 2
+
+puntajeDelfines = (97 + 112 + 101)/3;
+puntajeKoalas = (109 + 95 + 123)/3;
+
+if((puntajeDelfines > puntajeKoalas) && (puntajeDelfines >= 100))
+{
+    console.log(`¡Los ganadores son los Delfines con (${puntajeDelfines}) puntos!`);
+}
+else if((puntajeKoalas > puntajeDelfines) && (puntajeKoalas >= 100))
+{
+    console.log(`¡Los ganadores son los Koalas con (${puntajeKoalas}) puntos!`);
+}
+else if((puntajeKoalas == puntajeDelfines) && (puntajeKoalas >= 100))
+{
+    console.log(`¡Ambos equipos quedan empatados con (${puntajeKoalas}) puntos!`);
+}
+else
+{
+    console.log(`Nigún equipo cumple con los requisitos para ganar o empatar`);
+}
+
+// Prueba 3
+
+puntajeDelfines = (97 + 112 + 101)/3;
+puntajeKoalas = (109 + 95 + 106)/3;
+
+if((puntajeDelfines > puntajeKoalas) && (puntajeDelfines >= 100))
+{
+    console.log(`¡Los ganadores son los Delfines con (${puntajeDelfines}) puntos!`);
+}
+else if((puntajeKoalas > puntajeDelfines) && (puntajeKoalas >= 100))
+{
+    console.log(`¡Los ganadores son los Koalas con (${puntajeKoalas}) puntos!`);
+}
+else if((puntajeKoalas == puntajeDelfines) && (puntajeKoalas >= 100))
+{
+    console.log(`¡Ambos equipos quedan empatados con (${puntajeKoalas}) puntos!`);
+}
+else
+{
+    console.log(`Nigún equipo cumple con los requisitos para ganar o empatar`);
+}
+```
