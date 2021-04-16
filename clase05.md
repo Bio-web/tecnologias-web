@@ -26,3 +26,34 @@ Para usar JavaScript en el campo del desarrollo web se suele usar frameworks que
 Este número es el que brinda al desarrollador y al navegador la información de la versión y las características del JavaScript usado.
 
 # Valores y Variables
+
+Dado que JavaScript es débilmente tipado cuando se define una variable el automáticamente elige que tipo de dato es de acuerdo con el valor asignado.
+
+Como convención el profesor indico que es recomendable usar **"camelCase"** para nombrar las variables.
+
+# Tipos de Datos
+
+Se tienen dos tipos de datos en JavaScript, los primivitovs que consisten en:
+
+- number: Todos los numéricos.
+- string: Cadenas de caracteres.
+- boolean: verdadero o falso.
+-  undefined: No ha sido definido la variable o sin valor.
+- null: Valor nulo. Typeof no da como resultado nulo.
+- symbol: Variable única e inmodificable.
+- big int: números muy grandes.
+
+El otro tipo de datos serían los objetos, ya que precisamente JavaScript es un lenguaje de programación orientado a objetos.
+
+El comando `typeof` es útil para obtener el tipo de dato de una variable en específico.
+
+# Let, const y var
+
+Para inicializar variables en JavaScript se disponen de tres comandos:
+
+- `let nombreVariable` es cual crea varibales cuyo valor puede ser modificado posteriormente.
+- `const nombreVariable` el cual crea variables cuyo valor no se puede cambiar una vez inicializada.
+- `var nombreVariable` es un comando poco usado ya que es poco eficiente.
+
+# Operadores básicos
+
