@@ -405,8 +405,8 @@ let puntajeKoalas = calcPromedio(65, 54, 49);
 
 const verificarGanador = function(promDelfines, promKoalas)
 {
-    if(promDelfines > 2*promKoalas) console.log(`Los Delfines ganan (${promDelfines} contra ${promKoalas})`);
-    else if(promKoalas > 2*promDelfines) console.log(`Los Koalas ganan (${promKoalas} contra ${promDelfines})`);
+    if(promDelfines >= 2*promKoalas) console.log(`Los Delfines ganan (${promDelfines} contra ${promKoalas})`);
+    else if(promKoalas >= 2*promDelfines) console.log(`Los Koalas ganan (${promKoalas} contra ${promDelfines})`);
     else console.log('Ningún equipo gana');
     console.log('\n');
 }
