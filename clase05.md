@@ -446,17 +446,23 @@ const calcEdad4 = (anioNacimiento, primerNombre) => {
 ```
 
 # Challenge 5
-Steven quiere construir una calculadora de propinas muy simple para cada vez que vaya a comer a un restaurante. En su país, es habitual dar una propina del 15% si el valor de la factura está entre 50 y 300. Si el valor es diferente, la propina es del 20%.
+Steven quiere construir una calculadora de propinas muy simple para cada vez que vaya a comer a un restaurante. En su país, es habitual dar una propina del 15% si el valor de la factura está entre 50 y 300. Si el valor es diferente, la propina es del 20%.¡Volvamos a los dos equipos de gimnasia, Delfines y Koalas! Hay una nueva disciplina de gimnasia, que funciona de manera diferente.
+Cada equipo compite 3 veces, y luego se calcula el promedio de los 3 puntajes (es decir, un puntaje promedio por equipo).
+Un equipo SOLO gana si tiene al menos el DOBLE de la puntuación media del otro equipo. De lo contrario, ¡ningún equipo gana!
+1. Cree una función arrow 'calcPromedio' para calcular el promedio de 3 puntuaciones
+2. Usa la función para calcular el promedio de ambos equipos.
+3. Cree una función 'verificarGanador' que tome el puntaje promedio de cada equipo como parámetros ('promDelfines' y 'promKoalas'), y luego
+registre al ganador en la consola, junto con los puntos de victoria, de acuerdo con la regla anterior. Ejemplo: "Los koalas ganan (30 contra 13)".
+4. Utilice la función 'verificarGanador' para determinar el ganador para DATOS 1 y DATOS 2.
+5. Ignore los empates esta vez.
+DATOS DE LA PRUEBA 1: Los delfines logran un puntaje de 44, 23 y 71. Los koalas de 65, 54 y 49
+DATOS DE LA PRUEBA 2: Los delfines logran un puntaje de 85, 54 y 41. Los koalas de 23, 34 y 27
+SUGERENCIA: Para calcular el promedio de 3 valores, súmelos todos y divídalos por 3
+SUGERENCIA: Para verificar si el número A es al menos el doble del número B, verifique A >= 2 * B. Aplique esto a los puntajes promedio del
+equipo
 
-1. Su tarea es calcular la propina, dependiendo del valor de la factura. Cree una variable llamada 'propina' para esto. No
-está permitido usar una declaración if / else (si le resulta más fácil, puede comenzar con una declaración if / else y luego
-intentar convertirla en un operador ternario).
-2. Imprima una cadena en la consola que contenga el valor de la factura, la propina y el valor final (factura + propina).
 
-**Ejemplo**: 'El valor de la factura es 275, la propina es 41,25 y el valor total es 316,25'
-**DATOS DE PRUEBA**: prueba para valores de factura 275, 40 y 430
-**SUGERENCIA**: Para calcular el 20% de un valor, simplemente multiplícalo por 20/100 = 0,2
-**SUGERENCIA**: El valor X está entre 50 y 300, si es >= 50 && <= 300
+
 
 ```js
 // Prueba 1
