@@ -446,7 +446,7 @@ const calcEdad4 = (anioNacimiento, primerNombre) => {
 ```
 
 # Challenge 5
-Steven quiere construir una calculadora de propinas muy simple para cada vez que vaya a comer a un restaurante. En su país, es habitual dar una propina del 15% si el valor de la factura está entre 50 y 300. Si el valor es diferente, la propina es del 20%.¡Volvamos a los dos equipos de gimnasia, Delfines y Koalas! Hay una nueva disciplina de gimnasia, que funciona de manera diferente.
+¡Volvamos a los dos equipos de gimnasia, Delfines y Koalas! Hay una nueva disciplina de gimnasia, que funciona de manera diferente.
 Cada equipo compite 3 veces, y luego se calcula el promedio de los 3 puntajes (es decir, un puntaje promedio por equipo).
 Un equipo SOLO gana si tiene al menos el DOBLE de la puntuación media del otro equipo. De lo contrario, ¡ningún equipo gana!
 1. Cree una función arrow 'calcPromedio' para calcular el promedio de 3 puntuaciones
