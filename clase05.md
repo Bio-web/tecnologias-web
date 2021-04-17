@@ -76,6 +76,14 @@ También existen otros operadores para modificar de manera rápida el valor de u
 
 # Challenge 1
 
+Marcos y Juan están tratando de comparar su IMC (índice de masa corporal), que se calcula usando la fórmula: IMC = masa / altura ** 2 = masa / (altura * altura). (masa en kg y altura en metros).
+
+1. Almacene la masa y la altura de Marcos y Juan en variables
+2. Calcule ambos IMC usando la fórmula (incluso puede implementar ambas versiones)
+3. Cree una variable booleana 'marcosMayorIMC' que contenga información sobre si Marcos tiene un IMC más alto que Juan.
+DATOS DE LA PRUEBA 1: Marcos pesa 78 kg y mide 1,69 m de altura. Juan pesa 92 kg y mide 1,95 m de altura.
+DATOS DE LA PRUEBA 2: Marcos pesa 95 kg y mide 1,88 m de altura. Juan pesa 85 kg y mide 1,76 m de altura.
+
 A continuación se muestra el código en respuesta al primer desafío de programación en JavaScript.
 
 ```js
@@ -145,6 +153,16 @@ if (edad >= 18) {
 ```
 
 # Challenge 2
+
+Utilice el ejemplo de IMC del Coding Challenge # 1 y el código que ya escribió y mejóralo:
+
+1. Imprima un resultado agradable en la consola, diciendo quién tiene el IMC más alto. El mensaje puede ser
+"¡El IMC de Marcos es más alto que el de Juan!" o "¡El IMC de Juan es más alto que el de Marcos!"
+
+2. Utilice una plantilla literal para incluir los valores de IMC en las salidas. Ejemplo: "¡El IMC de Marcos (28,3)
+es más alto que el de Juan (23,9)!" 
+
+**SUGERENCIA**: Utilice una declaración if / else
 
 ```js
 // Prueba 1
@@ -217,6 +235,23 @@ JavaScript cuenta con los operadores lógicos básicos de igualdades == y !=. Ca
 Los operadores lógicos básicos estan disponibles en JavaScript correspondiendo "&&" a la operación "and", "||" a la operación "or" y "!" a la operación "not".
 
 # Challenge 3
+
+Hay dos equipos de gimnasia, Delfines y Koalas. Compiten entre sí 3 veces. ¡El ganador con la puntuación media más alta gana el
+campeonato!
+
+1. Calcule el puntaje promedio de cada equipo, utilizando los datos de prueba a continuación.
+2. Compare los puntajes promedio del equipo para determinar el ganador de la competencia e imprímalo en la consola. No olvide que
+puede haber un empate, así que pruebe eso también (empate significa que tienen el mismo puntaje promedio).
+3. Incluya un requisito para una puntuación mínima de 100. Con esta regla, un equipo solo gana si tiene una puntuación más alta que
+el otro equipo y, al mismo tiempo, una puntuación de al menos 100 puntos. SUGERENCIA: Utilice un operador lógico para probar la
+puntuación mínima, así como varios bloques else-if
+4. ¡La puntuación mínima también se aplica a un empate! Entonces, un empate solo ocurre cuando ambos equipos tienen la misma
+puntuación y ambos tienen una puntuación mayor o igual a 100 puntos. De lo contrario, ningún equipo gana el campeonato.
+
+**DATOS DE LA PRUEBA 1**: Los delfines obtienen una puntuación de 96, 108 y 89. Los koalas de 88, 91 y 110
+**DATOS DE LA PRUEBA 2**: Los delfines obtienen una puntuación de 97, 112 y 101. Los koalas de 109, 95 y 123
+**DATOS DE LA PRUEBA 3**: Los delfines obtienen una puntuación de 97, 112 y 101. Los koalas de 109, 95 y 106
+
 
 ```js
 // Prueba 1
@@ -326,6 +361,19 @@ console.log(respuesta);
 ```
 
 # Challenge 4
+
+Steven quiere construir una calculadora de propinas muy simple para cada vez que vaya a comer a un restaurante. En su país, es habitual dar una propina del 15% si el valor de la factura está entre 50 y 300. Si el valor es diferente, la propina es del 20%.
+
+1. Su tarea es calcular la propina, dependiendo del valor de la factura. Cree una variable llamada 'propina' para esto. No
+está permitido usar una declaración if / else (si le resulta más fácil, puede comenzar con una declaración if / else y luego
+intentar convertirla en un operador ternario).
+2. Imprima una cadena en la consola que contenga el valor de la factura, la propina y el valor final (factura + propina).
+
+**Ejemplo**: 'El valor de la factura es 275, la propina es 41,25 y el valor total es 316,25'
+**DATOS DE PRUEBA**: prueba para valores de factura 275, 40 y 430
+**SUGERENCIA**: Para calcular el 20% de un valor, simplemente multiplícalo por 20/100 = 0,2
+**SUGERENCIA**: El valor X está entre 50 y 300, si es >= 50 && <= 300
+
 ```js
 // Prueba 1
 
@@ -394,6 +442,17 @@ const calcEdad4 = (anioNacimiento, primerNombre) => {
 ```
 
 # Challenge 5
+Steven quiere construir una calculadora de propinas muy simple para cada vez que vaya a comer a un restaurante. En su país, es habitual dar una propina del 15% si el valor de la factura está entre 50 y 300. Si el valor es diferente, la propina es del 20%.
+
+1. Su tarea es calcular la propina, dependiendo del valor de la factura. Cree una variable llamada 'propina' para esto. No
+está permitido usar una declaración if / else (si le resulta más fácil, puede comenzar con una declaración if / else y luego
+intentar convertirla en un operador ternario).
+2. Imprima una cadena en la consola que contenga el valor de la factura, la propina y el valor final (factura + propina).
+
+**Ejemplo**: 'El valor de la factura es 275, la propina es 41,25 y el valor total es 316,25'
+**DATOS DE PRUEBA**: prueba para valores de factura 275, 40 y 430
+**SUGERENCIA**: Para calcular el 20% de un valor, simplemente multiplícalo por 20/100 = 0,2
+**SUGERENCIA**: El valor X está entre 50 y 300, si es >= 50 && <= 300
 
 ```js
 // Prueba 1
