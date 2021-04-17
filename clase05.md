@@ -23,25 +23,28 @@ Para usar JavaScript en el campo del desarrollo web se suele usar frameworks que
 
 # Especificación de JavaScript
 
-Este número es el que brinda al desarrollador y al navegador la información de la versión y las características del JavaScript usado.
+
+La especifiación de javaScript esta acompaño por un número y las siglas ES, la cual brindan al desarrollador y al navegador la información de la versión y las características del JavaScript usado.
+
+**Ej**: ES5-> ES6/2015->ES11/ES2020
 
 # Valores y Variables
 
 Dado que JavaScript es débilmente tipado cuando se define una variable el automáticamente elige que tipo de dato es de acuerdo con el valor asignado.
 
-Como convención el profesor indico que es recomendable usar **"camelCase"** para nombrar las variables.
+Como convención el profesor indico que es recomendable usar **"camelCase"** para nombrar las variables,en donde la primera letra esen minúscula y la segunda en mayúscula. Esto mejora la legibilidad del código y facilita el mantenimiento de este. 
 
 # Tipos de Datos
 
-Se tienen dos tipos de datos en JavaScript, los primivitovs que consisten en:
+Se tienen dos tipos de datos en JavaScript, los primivitos que consisten en:
 
-- number: Todos los numéricos.
-- string: Cadenas de caracteres.
-- boolean: verdadero o falso.
--  undefined: No ha sido definido la variable o sin valor.
-- null: Valor nulo. Typeof no da como resultado nulo.
-- symbol: Variable única e inmodificable.
-- big int: números muy grandes.
+- **number**: Todos los numéricos (enteros, flotantes, double)
+- **string**: Cadenas de caracteres.
+- **boolean**: verdadero o falso.
+- **undefined**: No ha sido definido la variable o sin valor.
+- **null**: Valor nulo. Typeof no da como resultado nulo.
+- **symbol**: Variable única e inmodificable.
+- **big int**: números muy grandes.
 
 El otro tipo de datos serían los objetos, ya que precisamente JavaScript es un lenguaje de programación orientado a objetos.
 
@@ -57,7 +60,7 @@ Para inicializar variables en JavaScript se disponen de tres comandos:
 
 # Operadores Básicos
 
-JavaScript cuenta con los operadores matemáticos básicos como lo son +, -, * , \/. Estos operadores aritméticos se pueden usar en operaciones entre variables e incluso en asignaciones como se muestra a continuación.
+JavaScript cuenta con los operadores matemáticos básicos como lo son +, -, *  ,\/. Estos operadores aritméticos se pueden usar en operaciones entre variables e incluso en asignaciones como se muestra a continuación.
 
 `const year = 2020;
 const edadAndres = 2020 - 1990;`
@@ -68,11 +71,11 @@ También se cuenta con los operadores de comparación básicos: >, >=, <, <=.
 
 # Operadores de Asignación
 
-Se pueden usar ciertos operadores para de manera breve modificar el valor de variables con operaciones básicas. Naturalmente hay uno de ellos para cada operación básica. Ellos son: +=, -=, *=, \/=.
+Se pueden usar ciertos operadores de manera breve modificar el valor de variables con operaciones básicas. Naturalmente hay uno de ellos para cada operación básica. Ellos son: +=, -=, *=, \/=.
 
 Su uso sería del estilo `variable += 10` que correspondería a sumarle 10 al valor de "variable" y asignarselo a "variable".
 
-También existen otros operadores para modificar de manera rápida el valor de una variable y estos son ++ y -- que respectivamente suman y restan 1 a la variable a la que son aplicados y le asignan el nuevo valor a la variable.
+También existen otros operadores para modificar de manera rápida el valor de una variable y estos son ++ y - - que respectivamente suman y restan 1 a la variable a la que son aplicados y le asignan el nuevo valor a la variable.
 
 # Challenge 1
 
@@ -81,8 +84,9 @@ Marcos y Juan están tratando de comparar su IMC (índice de masa corporal), que
 1. Almacene la masa y la altura de Marcos y Juan en variables
 2. Calcule ambos IMC usando la fórmula (incluso puede implementar ambas versiones)
 3. Cree una variable booleana 'marcosMayorIMC' que contenga información sobre si Marcos tiene un IMC más alto que Juan.
-DATOS DE LA PRUEBA 1: Marcos pesa 78 kg y mide 1,69 m de altura. Juan pesa 92 kg y mide 1,95 m de altura.
-DATOS DE LA PRUEBA 2: Marcos pesa 95 kg y mide 1,88 m de altura. Juan pesa 85 kg y mide 1,76 m de altura.
+
+**DATOS DE LA PRUEBA 1**: Marcos pesa 78 kg y mide 1,69 m de altura. Juan pesa 92 kg y mide 1,95 m de altura.
+**DATOS DE LA PRUEBA 2**: Marcos pesa 95 kg y mide 1,88 m de altura. Juan pesa 85 kg y mide 1,76 m de altura.
 
 A continuación se muestra el código en respuesta al primer desafío de programación en JavaScript.
 
@@ -138,7 +142,7 @@ linea 2`);
 
 # Condicionales: if / else
 
-Usando la sentencia if/ese se crean condicionales los cuales dependen de un valor lógico entregado como parámetro, estos condicionales requieren estar encerrados en llaves "{}" cuando son de más de una linea. A continuación se muestra un ejemplo de estos:
+Usando la sentencia if/else se crean condicionales los cuales dependen de un valor lógico entregado como parámetro, estos condicionales requieren estar encerrados en llaves "{}" cuando son de más de una linea. A continuación se muestra un ejemplo de estos:
 
 ```js
 const edad = 17;
@@ -213,26 +217,26 @@ console.log(typeof edadString);
 
 // Coerción
 console.log('Yo tengo ' + 30 + ' años');// El 30 pasa a ser un string
-console.log('10' + '10');
-console.log('10' + 3);
-console.log('100' / '5');// Convierte los strings en numeros
-console.log('100' > '5');
-console.log(100 > 5);
-console.log('100' < '5');
-console.log('100' > 5);
+console.log('10' + '10'); // se concatena  1010
+console.log('10' + 3); // Obliga el string para que se convierta en tipo int, 103
+console.log('100' / '5');// Convierte los strings en numeros, hace la operación
+console.log('100' > '5'); // compara los strings no los numero: False
+console.log(100 > 5); // True
+console.log('100' < '5'); // True
+console.log('100' > 5); // True
 ```
 
 # Valores Truthy y Falsy
 
-Todos los tipos de dato tienen un valor de verdad intrínseco dependiendo de su valor y su tipo, de manera que pueden ser usados en condicionales, los valores que tienen atado un valor de verdad "falsy" son los tipos undefined y null, los numéricos con valor 0,los strings vacíos '' y NaN. Todos los demás valores y tipos tendrán un valor "truty" si son usados en operaciones lógicas.
+Todos los tipos de dato tienen un valor de verdad intrínseco dependiendo de su valor y su tipo, de manera que pueden ser usados en condicionales, los valores que tienen atado un valor de verdad "falsy" son los tipos undefined y null, los numéricos con valor **0**,los strings vacíos **''** y **NaN**. Todos los demás valores y tipos tendrán un valor "truthy" si son usados en operaciones lógicas.
 
 # Operadores de Igualdad
 
-JavaScript cuenta con los operadores lógicos básicos de igualdades == y !=. Cabe destacar que para evitar que se causen errores debido a la coerción se puede usar los operadores === y !== los cuales evitan que haya cualquier conversión de tipo de dato forzada, de manera que se requiere que los datos sean del mismo tipo originalmente.
+JavaScript cuenta con los operadores lógicos básicos de igualdades `==` y `!=`. Cabe destacar que para evitar que se causen errores debido a la coerción se puede usar los operadores `===` y `!==` los cuales evitan que haya cualquier conversión de tipo de dato forzada, de manera que se requiere que los datos sean del mismo tipo originalmente.
 
 # Operadores Lógicos
 
-Los operadores lógicos básicos estan disponibles en JavaScript correspondiendo "&&" a la operación "and", "||" a la operación "or" y "!" a la operación "not".
+Los operadores lógicos básicos estan disponibles en JavaScript correspondiendo `&&` a la operación `and`, `||` a la operación `or` y `!` a la operación `not`.
 
 # Challenge 3
 
