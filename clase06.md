@@ -271,7 +271,8 @@ Las bases de datos NoSQL están diseñadas específicamente para modelos de dato
     * riak
     * Apache HBASE
     * memcached 
-!["BD"] (https://i.blogs.es/5248c4/nosql/1366_2000.png)
+    
+![image](https://user-images.githubusercontent.com/64289108/115439229-f4abc000-a1d3-11eb-87a1-e0273071cd1c.png)
 
 # DOCUMENTOS
 
@@ -305,8 +306,7 @@ los caracteres | o >
 
 - **Carácteristicas de Mongo DB**
 MongoDB es una base de datos Documental gratuita y de código abierto.
-
-!["mongo"] (https://i.blogs.es/a49483/logo-mongodb-tagline-2/450_1000.png)
+![image](https://user-images.githubusercontent.com/64289108/115439282-07be9000-a1d4-11eb-9efe-12687f84cbaf.png)
 
     * En MongoDB los documentos son objetos JSON.
     * Los datos son guardados como BSON (Binary JSON).
