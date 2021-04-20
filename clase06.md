@@ -260,7 +260,7 @@ Las bases de datos NoSQL están diseñadas específicamente para modelos de dato
 
 !["imagen"](https://www.certia.net/wp-content/uploads/2021/03/NoSQL4.png)
 
-!["Tipos"] (https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tecnologias-informacion.com%2Fnosql.html&psig=AOvVaw0BtcOpUFbEFOB8HMxk30RT&ust=1619024841917000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNjO5tWnjfACFQAAAAAdAAAAABAD) 
+![image](https://user-images.githubusercontent.com/64289108/115439107-d2b23d80-a1d3-11eb-86c5-34e158ce138c.png)
 
 - **Ejemplos de bases de datos no relacionales**
     * redis
