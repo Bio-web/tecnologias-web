@@ -73,9 +73,7 @@ db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del p
         }
 }
 ```
-● Consultar a todos los vendedores.
-
-● Consultar la información de un vendedor por nombre.
+* Consultar la información de un vendedor por nombre.
 ``` js
  db.inventario.find({"vendedor.nombre":"Panchito"}).pretty()
 {
@@ -94,7 +92,7 @@ db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del p
         }
 }
 ``` 
-● Consultar todos los vendedores cuya ciudad de residencia sea Medellín.
+* Consultar todos los vendedores cuya ciudad de residencia sea Medellín.
 
 ``` js
  > db.inventario.find({"vendedor.ciudad de residencia":"Medellin"}).pretty()
@@ -129,8 +127,41 @@ db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del p
         }
 }
 ``` 
-
- ● Consultar el vendedor con mejor calificación.
- 
- ● El producto más caro de la tienda.
- 
+* Consultar el vendedor con mejor calificación.
+```js
+ db.inventario.find().sort({"vendedor.calificacion por ventas":-1}).limit(1).pretty()
+{
+        "_id" : ObjectId("6080e608152dc02b1fc55290"),
+        "nombre producto" : "Crema dental",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 12000,
+        "Cantidad de inventario" : 10,
+        "vendedor" : {
+                "nombre" : "Pepito",
+                "teléfonos" : 123,
+                "dirección" : "calle123",
+                "ciudad de residencia" : "Medellin",
+                "calificación por ventas" : 10
+        }
+}
+```
+* El producto más caro de la tienda.
+ ```js
+ db.inventario.find().sort({precio:-1}).limit(1).pretty()
+{
+        "_id" : ObjectId("6080e608152dc02b1fc55290"),
+        "nombre producto" : "Crema dental",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 12000,
+        "Cantidad de inventario" : 10,
+        "vendedor" : {
+                "nombre" : "Pepito",
+                "teléfonos" : 123,
+                "dirección" : "calle123",
+                "ciudad de residencia" : "Medellin",
+                "calificación por ventas" : 10
+        }
+}
+```
