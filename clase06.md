@@ -317,13 +317,27 @@ MongoDB es una base de datos Documental gratuita y de código abierto.
  
 
 **Comparación de una tabla de SQL y un documento de no SQL**
+**Comparación de una tabla de SQL y un documento de no SQL**
 
-**Ventajas**
+Se puede simplificar como un solo documento embedido dos tablas en comparación con SQL. La consulta va ser más rápido en comparación con las BD SQL. 
 
-**Desventajas**
+**Ejemplo estructura de una BD no SQL**
 
+A continuación se presenta una estructura de una pelicula para una base de datos no SQL. 
 
-**Ejemplo estrcutura**
+```js
+{
+    "nombrePelicula":"Volver al futuro",
+    "generoPelicula": ["Comedia","Acción y aventuras"],
+    "directorPelicula:": " ",
+    "anioPublicacion": 1985,
+    "rating"="12",
+    "abstract":"description",
+    "duracionPelicula": 120,
+    "actoresPrincipales": [],
+    "productora": ""
+} 
+```
 
 * Mongo DB es una base de datos Documental gratuita y de código abierto
 * En MongoDB los documentos son objetos JSON
@@ -333,6 +347,33 @@ MongoDB es una base de datos Documental gratuita y de código abierto.
 * Usado por compañias para suplir necesidades
 
 
-**Instalación MongoDB**
+# **Instalación MongoDB**
 
+    ● Descargar e instalar mongo de la pagina oficial: https://www.mongodb.com/download-center/community
+    ● En Windows agregar la ruta de la carpeta bin que se encuentra dentro del directorio de instalación de mongo a la
+    variable de entorno Path.
+    ● En Linux y OSX se deben copiar el contenido del directorio bin al directorio de binarios del sistema /usr/local/bin.
+    ● Crear los directorios data y data/db en la carpeta donde vayamos a ejecutar el servicio de mongo (en Linux y OSX se
+    deben dar permisos de lectura y escritura a los directorios).
+    ● En la consola de comandos ejecutar el comando mongod (mongo daemon) para levantar el servicio de mongo.
+    ● En otra consola ejecutar el comando mongo para conectarse como cliente del servicio montado en el punto anterior.
+    ● Una vez conectados deberá aparecer la consola de mongo 
+
+![image](https://user-      images.githubusercontent.com/64289108/115643355-388ceb00-a2e2-11eb-9de4-61afecfefad8.png)
+
+## **Comandos mongoDB**
+    - `use` :Para crear una base de datos.
+    - `show dbs`: Para listar las bases de datos.
+    - `db.dropDatabase()`: Para borrar una nueva bases de datos.
+    - `db.createCollections`: Para crear una nueva colección usando la base de datos creada.
+    - `show collections`:Para listar las colecciones 
+    -`db.collection.drop()`:Para eliminar una colección 
+    - `db.collection.find: consultar colecciones 
+
+● Un **Documento** está compuesto por campos y sus valores.
+● Los **Documentos** se almacena en notación Javascript. El _id es un valor único de cada Documento que permite identificarlo.
+● El _id es un campo obligatorio en cada Documento, si no se especifica MongoDB lo agrega automáticamente.
+● En MongoDB el valor autoasignado del campo _id es un objeto de tipo ObjectId con un valor hexadecimal único para ese Documento.
+
+![image](https://user-images.githubusercontent.com/64289108/115644499-4cd1e780-a2e4-11eb-9d86-3cf1f92fd5e1.png)
 
