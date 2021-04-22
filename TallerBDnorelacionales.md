@@ -1,4 +1,4 @@
-#Taller MongoDB
+# Taller MongoDB
 
 Diseñar e implementar una base de datos no relacional en MongoDB con base en el siguiente enunciado:
 
@@ -15,7 +15,7 @@ de creación insertOne o insertMany. A partir de la base de datos implementada r
     ● El producto más caro de la tienda.
 Puede agregar campos y más complejidad a los documentos si lo cree conveniente.
 
-##Desarrollo
+## Desarrollo
 ```js
 use tiendaVirtual
 db.inventario.insertOne( {"nombre producto":"Crema dental","Descripción del producto":"descripcion", "Fecha de creacion":240421 ,"Precio": 12000 ,"Cantidad de inventario": 10, "vendedor":{"nombre":"Pepito","teléfonos":123, "dirección":"calle123", "ciudad de residencia":"Medellin" ,"calificación por ventas": 10}})
