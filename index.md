@@ -7,5 +7,5 @@ Lista de clases
 - [Clase 04:Bases de datos implmentados en MySQL](https://bio-web.github.io/tecnologias-web/clase04)
 - [Clase 05:Fundamentos de JavaScript](https://bio-web.github.io/tecnologias-web/clase05) 
 - [Clase 06:Fundamentos de JavaScript y Bases de datos no relacionales](https://bio-web.github.io/tecnologias-web/clase06) 
-- [Taller bases de datos no relacionales](https://github.com/Bio-web/tecnologias-web/blob/main/Taller%20bases%20de%20datos%20no%20relacionales.md)
+- [Taller bases de datos no relacionales](https://github.com/Bio-web/tecnologias-web/blob/main/Tallerbasesdedatosnorelacionales)
 - [Proyecto 1:Bases de datos relacionales](https://bio-web.github.io/tecnologias-web/BD_relacionales)
