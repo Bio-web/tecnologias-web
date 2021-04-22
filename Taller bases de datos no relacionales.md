@@ -128,7 +128,7 @@ db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del p
                 "calificación por ventas" : 10
         }
 }
-``` js
+``` 
 
  ● Consultar el vendedor con mejor calificación.
  ● El producto más caro de la tienda.
