@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MongoDB: Metodos, filtros y operadores
+title: MongoDB - Metodos, filtros y operadores
 author: Santiago Gutiérrez Pérez
 date: 2021-04-14
 ---
