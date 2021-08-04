@@ -347,6 +347,14 @@ A continuación se presenta una estructura de una pelicula para una base de dato
 * Usado por compañias para suplir necesidades
 
 
+**Funciones CRUD**
+Las funciones para crear,consultar,actualizar y eliminar tienen la siguiente sintáxis:
+
+```js
+Nombre_basedatos.nombre_coleccion.funcionCRUD
+```
+MongoDB tiene funciones que permiten realizar las funciones CRUD de forma masiva o única. 
+
 # **Instalación MongoDB**
 
     ● Descargar e instalar mongo de la pagina oficial: https://www.mongodb.com/download-center/community
