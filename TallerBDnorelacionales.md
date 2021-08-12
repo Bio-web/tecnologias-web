@@ -298,7 +298,23 @@ Muestra el número de productos con fechas entre ese rango
 ```
 ● Consultar todos los productos que contengan la palabra “aseo” en el nombre o en la
 descripción
-
+```js
+db.inventario.find({"Descripción del producto":/aseo/}).pretty()
+{
+        "_id" : ObjectId("6115830eeef8a0052b1da4d2"),
+        "nombre producto" : "Papel higienico",
+        "Descripción del producto" : "aseo",
+        "Fecha de creacion" : 311220,
+        "Precio" : 12000,
+        "Cantidad de inventario" : 90,
+        "vendedor" : {
+                "nombre" : "Juanito",
+                "teléfonos" : 4567,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bucaramanga",
+                "calificación por ventas" : 8
+        }
+```
 ● Consultar todos los productos cuyo nombre inicie por la letra “C”
 
 ● Consultar el nombre y la descripción de los productos de un vendedor
