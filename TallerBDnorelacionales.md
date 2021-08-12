@@ -324,7 +324,69 @@ db.inventario.find({"nombre producto":/[C]/}).pretty().count()
  db.inventario.find({"vendedor.nombre":"Pepa"},{"nombre producto": 1}).pretty().count()
 ```
 ● Consultar 10 productos ordenados por nombre alfabeticamente
-
+```js
+db.inventario.find({"nombre producto":/[A-Z]/}).sort({"nombre producto":-1}).pretty()
+{
+        "_id" : ObjectId("6115830eeef8a0052b1da4d2"),
+        "nombre producto" : "Papel higienico",
+        "Descripción del producto" : "aseo",
+        "Fecha de creacion" : 311220,
+        "Precio" : 12000,
+        "Cantidad de inventario" : 90,
+        "vendedor" : {
+                "nombre" : "Juanito",
+                "teléfonos" : 4567,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bucaramanga",
+                "calificación por ventas" : 8
+        }
+}
+{
+        "_id" : ObjectId("611579c4eef8a0052b1da4d0"),
+        "nombre producto" : "Jabon",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 1000,
+        "Cantidad de inventario" : 0,
+        "vendedor" : {
+                "nombre" : "Pepa",
+                "teléfonos" : 1234,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bogota",
+                "calificación por ventas" : 2
+        }
+}
+{
+        "_id" : ObjectId("61157778eef8a0052b1da4ce"),
+        "nombre producto" : "Crema dental",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 12000,
+        "Cantidad de inventario" : 10,
+        "vendedor" : {
+                "nombre" : "Pepito",
+                "teléfonos" : 123,
+                "dirección" : "calle123",
+                "ciudad de residencia" : "Medellin",
+                "calificación por ventas" : 10
+        }
+}
+{
+        "_id" : ObjectId("61157790eef8a0052b1da4cf"),
+        "nombre producto" : "Cepillo dental",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 5000,
+        "Cantidad de inventario" : 140,
+        "vendedor" : {
+                "nombre" : "Panchito",
+                "teléfonos" : 1234,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bogota",
+                "calificación por ventas" : 8
+        }
+}
+```
 ● Consultar los 5 vendedores con mejor reputación de la tienda
 
 ● Consultar los productos con toda la información del vendedor
