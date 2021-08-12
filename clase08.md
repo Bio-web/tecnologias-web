@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Bases de datos en Mongo
-author:Angie Dahiana Vargas Serna
+title: MongoDB Índices y agregación
+author: Angie Dahiana Vargas Serna
 date: 2021-07-31
 ---
+
+
 
 # Índices en bases de datos No relacionales:
 
