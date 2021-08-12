@@ -171,22 +171,8 @@ db.inventario.find({},{"vendedor.nombre":1}).pretty()
                 "calificación por ventas" : 10
         }
 }
-{
-        "_id" : ObjectId("6080e638152dc02b1fc55291"),
-        "nombre producto" : "Crema dental",
-        "Descripción del producto" : "descripcion",
-        "Fecha de creacion" : 240421,
-        "Precio" : 12000,
-        "Cantidad de inventario" : 10,
-        "vendedor" : {
-                "nombre" : "Pepito",
-                "teléfonos" : 123,
-                "dirección" : "calle123",
-                "ciudad de residencia" : "Medellin",
-                "calificación por ventas" : 10
-        }
-}
 ``` 
+
 * Consultar el vendedor con mejor calificación.
 ```js
  db.inventario.find().sort({"vendedor.calificacion por ventas":-1}).limit(1).pretty()
@@ -230,15 +216,25 @@ db.inventario.find({},{"vendedor.nombre":1}).pretty()
 
 Con base en la base de datos implementada en el punto anterior realizar las siguientes
 consultas:
+
 ● Consultar los productos de la tienda cuyo precio sea mayor a 50 mil pesos
+
 ● Consultar los productos que tengan menos de 50 existencias en inventario
+
 ● Consultar los productos que fueron creados entre el 1 de enero de y el 31 de
 diciembre de 2020
+
 ● Consultar todos los productos que contengan la palabra “aseo” en el nombre o en la
 descripción
+
 ● Consultar todos los productos cuyo nombre inicie por la letra “C”
+
 ● Consultar el nombre y la descripción de los productos de un vendedor
+
 ● Consultar 10 productos ordenados por nombre alfabeticamente
+
 ● Consultar los 5 vendedores con mejor reputación de la tienda
+
 ● Consultar los productos con toda la información del vendedor
+
 ● Consultar el valor del producto más caro que venda cada vendedor
