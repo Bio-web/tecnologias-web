@@ -238,7 +238,54 @@ db.inventario.find({"Precio":{$gt:50000}}).pretty()
 }
 ```
 ● Consultar los productos que tengan menos de 50 existencias en inventario
-
+```js
+db.inventario.find({"Cantidad de inventario":{$lt:50}}).pretty()
+{
+        "_id" : ObjectId("61157778eef8a0052b1da4ce"),
+        "nombre producto" : "Crema dental",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 12000,
+        "Cantidad de inventario" : 10,
+        "vendedor" : {
+                "nombre" : "Pepito",
+                "teléfonos" : 123,
+                "dirección" : "calle123",
+                "ciudad de residencia" : "Medellin",
+                "calificación por ventas" : 10
+        }
+}
+{
+        "_id" : ObjectId("611579c4eef8a0052b1da4d0"),
+        "nombre producto" : "Jabon",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 1000,
+        "Cantidad de inventario" : 0,
+        "vendedor" : {
+                "nombre" : "Pepa",
+                "teléfonos" : 1234,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bogota",
+                "calificación por ventas" : 2
+        }
+}
+{
+        "_id" : ObjectId("61157fbeeef8a0052b1da4d1"),
+        "nombre producto" : "caja de cervezas",
+        "Descripción del producto" : "debida",
+        "Fecha de creacion" : 311221,
+        "Precio" : 60000,
+        "Cantidad de inventario" : 4,
+        "vendedor" : {
+                "nombre" : "Juanito",
+                "teléfonos" : 4567,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bucaramanga",
+                "calificación por ventas" : 8
+        }
+}
+```
 ● Consultar los productos que fueron creados entre el 1 de enero de y el 31 de
 diciembre de 2020
 
