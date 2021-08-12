@@ -1,5 +1,7 @@
 # Taller MongoDB
 
+# Parte 1
+
 Diseñar e implementar una base de datos no relacional en MongoDB con base en el siguiente enunciado:
 
 Se requiere la creación de una tienda virtual de productos varios donde se tenga la capacidad de almacenar para cada producto características tales como el nombre, la descripción del producto, la fecha de creación, el precio y la cantidad en inventario, adicionalmente por cada producto se requiere poder consultar la información del vendedor como el nombre, información de contacto (`teléfono o teléfonos, dirección,ciudad de residencia, etc`) y calificación por ventas. Poblar la base de datos con varios productos y vendedores haciendo uso de las funciones
@@ -165,3 +167,20 @@ db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del p
         }
 }
 ```
+
+# Parte 2
+
+Con base en la base de datos implementada en el punto anterior realizar las siguientes
+consultas:
+● Consultar los productos de la tienda cuyo precio sea mayor a 50 mil pesos
+● Consultar los productos que tengan menos de 50 existencias en inventario
+● Consultar los productos que fueron creados entre el 1 de enero de y el 31 de
+diciembre de 2020
+● Consultar todos los productos que contengan la palabra “aseo” en el nombre o en la
+descripción
+● Consultar todos los productos cuyo nombre inicie por la letra “C”
+● Consultar el nombre y la descripción de los productos de un vendedor
+● Consultar 10 productos ordenados por nombre alfabeticamente
+● Consultar los 5 vendedores con mejor reputación de la tienda
+● Consultar los productos con toda la información del vendedor
+● Consultar el valor del producto más caro que venda cada vendedor
