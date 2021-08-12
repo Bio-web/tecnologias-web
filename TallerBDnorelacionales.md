@@ -111,7 +111,28 @@ db.inventario.find({"Cantidad de inventario":{$gt:0}}).pretty()
 }
 
 ```
-
+* Consultar a todos los vendedores.
+```js
+db.inventario.find({},{"vendedor.nombre":1}).pretty()
+{
+        "_id" : ObjectId("61157778eef8a0052b1da4ce"),
+        "vendedor" : {
+                "nombre" : "Pepito"
+        }
+}
+{
+        "_id" : ObjectId("61157790eef8a0052b1da4cf"),
+        "vendedor" : {
+                "nombre" : "Panchito"
+        }
+}
+{
+        "_id" : ObjectId("611579c4eef8a0052b1da4d0"),
+        "vendedor" : {
+                "nombre" : "Pepa"
+        }
+}
+```
 * Consultar la información de un vendedor por nombre.
 ``` js
  db.inventario.find({"vendedor.nombre":"Panchito"}).pretty()
