@@ -1,10 +1,10 @@
-
 ---
 layout: post
 title: Bases de datos en Mongo
 author:Angie Dahiana Vargas Serna
 date: 2021-07-31
 ---
+
 # Índices en bases de datos No relacionales:
 
 Los *índices* son estructuras de datos especiales que almacenan una pequeña parte de datos de la colección en una forma más fácil de recorrer. 
