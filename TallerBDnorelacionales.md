@@ -390,5 +390,67 @@ db.inventario.find({"nombre producto":/[A-Z]/}).sort({"nombre producto":-1}).pre
 ● Consultar los 5 vendedores con mejor reputación de la tienda
 
 ● Consultar los productos con toda la información del vendedor
-
+```js
+db.inventario.find(null,{"vendedor":1,"_id":0,"nombre producto":1}).pretty()
+{
+        "nombre producto" : "Crema dental",
+        "vendedor" : {
+                "nombre" : "Pepito",
+                "teléfonos" : 123,
+                "dirección" : "calle123",
+                "ciudad de residencia" : "Medellin",
+                "calificación por ventas" : 10
+        }
+}
+{
+        "nombre producto" : "Cepillo dental",
+        "vendedor" : {
+                "nombre" : "Panchito",
+                "teléfonos" : 1234,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bogota",
+                "calificación por ventas" : 8
+        }
+}
+{
+        "nombre producto" : "Jabon",
+        "vendedor" : {
+                "nombre" : "Pepa",
+                "teléfonos" : 1234,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bogota",
+                "calificación por ventas" : 2
+        }
+}
+{
+        "nombre producto" : "caja de cervezas",
+        "vendedor" : {
+                "nombre" : "Juanito",
+                "teléfonos" : 4567,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bucaramanga",
+                "calificación por ventas" : 8
+        }
+}
+{
+        "nombre producto" : "Papel higienico",
+        "vendedor" : {
+                "nombre" : "Juanito",
+                "teléfonos" : 4567,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bucaramanga",
+                "calificación por ventas" : 8
+        }
+}
+{
+        "nombre producto" : "cereales",
+        "vendedor" : {
+                "nombre" : "Pepa",
+                "teléfonos" : 4567,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Barranquilla",
+                "calificación por ventas" : 1
+        }
+}
+```
 ● Consultar el valor del producto más caro que venda cada vendedor
