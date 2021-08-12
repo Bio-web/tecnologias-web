@@ -34,42 +34,44 @@ Pero para hacer las búsquedas por este índice se hace de la siguiente manera:
 
 db.collections.find({$text:{$search:"palabraBuscar"}})
 
+```
 Solo se puede crear un índice de texto con varios campos 
-
-
 
 - Para revisar los distintos indices actuales se puede utilizar el siguiente comando:
 db.collection.getIndexes()
 
 - Para revisar el plan de ejecución de los query que permite saber si busca los datos por scaneo de toda la colleción o por scaneo de index
-
+```js
 db.collecion.explain()
 `stage`: COOLSCAN //Por colección
 `stage`: IXSCAN  //Por índices
+```
 
 ## Eliminar índices
+```js
 db.collections.dropIndex("nameIndex")
-
+```
 
 ## Agregación en Mongo
 
 - Permite procesar los datos y devolver los calculados
 - Permite agregar valores de varios documentos y realizar operaciones sobre los datos agrupados
-```
+
 
 ### Métodos 
 
 1)Pipeline de agregación:
 ```js 
 db.collection.aggregate([{$match:{campo: valor}}, $group: {_id : "$year", numeroPeliculas:{$count:{}}} ])
-match: Filtro del campo
-group: Agrupación 
-count: Contador // Cúantas películas cumple el filtro
-sum: Sumador // 
+```
+*match:* Filtro del campo
+*group:* Agrupación 
+*count:* Contador // Cúantas películas cumple el filtro
+*sum:* Sumador // 
 
 
-Ejemplo lookup:
-
+### Ejemplo lookup:
+```js 
 db.peliculas.aggregate([
     {
         $lookup:{  
@@ -80,7 +82,6 @@ db.peliculas.aggregate([
         }
     }
 ])
-
 ```
 
 2) Map-Reduce
