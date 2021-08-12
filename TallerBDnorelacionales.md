@@ -219,7 +219,24 @@ Con base en la base de datos implementada en el punto anterior realizar las sigu
 consultas:
 
 ● Consultar los productos de la tienda cuyo precio sea mayor a 50 mil pesos
-
+```js
+db.inventario.find({"Precio":{$gt:50000}}).pretty()
+{
+        "_id" : ObjectId("61157fbeeef8a0052b1da4d1"),
+        "nombre producto" : "caja de cervezas",
+        "Descripción del producto" : "debida",
+        "Fecha de creacion" : 311221,
+        "Precio" : 60000,
+        "Cantidad de inventario" : 4,
+        "vendedor" : {
+                "nombre" : "Juanito",
+                "teléfonos" : 4567,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bucaramanga",
+                "calificación por ventas" : 8
+        }
+}
+```
 ● Consultar los productos que tengan menos de 50 existencias en inventario
 
 ● Consultar los productos que fueron creados entre el 1 de enero de y el 31 de
