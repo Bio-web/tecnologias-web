@@ -320,7 +320,9 @@ db.inventario.find({"Descripción del producto":/aseo/}).pretty()
 db.inventario.find({"nombre producto":/[C]/}).pretty().count()
 ```
 ● Consultar el nombre y la descripción de los productos de un vendedor
-
+```js
+ db.inventario.find({"vendedor.nombre":"Pepa"},{"nombre producto": 1}).pretty().count()
+```
 ● Consultar 10 productos ordenados por nombre alfabeticamente
 
 ● Consultar los 5 vendedores con mejor reputación de la tienda
