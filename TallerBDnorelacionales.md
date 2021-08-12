@@ -23,6 +23,7 @@ use tiendaVirtual
 db.inventario.insertOne( {"nombre producto":"Crema dental","Descripción del producto":"descripcion", "Fecha de creacion":240421 ,"Precio": 12000 ,"Cantidad de inventario": 10, "vendedor":{"nombre":"Pepito","teléfonos":123, "dirección":"calle123", "ciudad de residencia":"Medellin" ,"calificación por ventas": 10}})
 db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del producto":"descripcion", "Fecha de creacion":240421 ,"Precio":5000 ,"Cantidad de inventario": 140, "vendedor":{"nombre":"Panchito","teléfonos":1234, "dirección":"calle1243", "ciudad de residencia":"Bogota" ,"calificación por ventas":8}})
 db.inventario.insertOne( {"nombre producto":"jabon","Descripción del producto":"descripcion", "Fecha de creacion":240421 ,"Precio":1000 ,"Cantidad de inventario": 0, "vendedor":{"nombre":"Pepa","teléfonos":1234, "dirección":"calle1243", "ciudad de residencia":"Bogota" ,"calificación por ventas":2}})
+db.inventario.insertOne( {"nombre producto":"caja de cervezas","Descripción del producto":"debida", "Fecha de creacion":311221 ,"Precio":60000 ,"Cantidad de inventario": 4, "vendedor":{"nombre":"Juanito","teléfonos":4567, "dirección":"calle1243", "ciudad de residencia":"Bucaramanga" ,"calificación por ventas":8}})
 ```
 * Consultar productos de la tienda 
 ```js
