@@ -22,6 +22,7 @@ Puede agregar campos y más complejidad a los documentos si lo cree conveniente.
 use tiendaVirtual
 db.inventario.insertOne( {"nombre producto":"Crema dental","Descripción del producto":"descripcion", "Fecha de creacion":240421 ,"Precio": 12000 ,"Cantidad de inventario": 10, "vendedor":{"nombre":"Pepito","teléfonos":123, "dirección":"calle123", "ciudad de residencia":"Medellin" ,"calificación por ventas": 10}})
 db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del producto":"descripcion", "Fecha de creacion":240421 ,"Precio":5000 ,"Cantidad de inventario": 140, "vendedor":{"nombre":"Panchito","teléfonos":1234, "dirección":"calle1243", "ciudad de residencia":"Bogota" ,"calificación por ventas":8}})
+db.inventario.insertOne( {"nombre producto":"jabon","Descripción del producto":"descripcion", "Fecha de creacion":240421 ,"Precio":1000 ,"Cantidad de inventario": 0, "vendedor":{"nombre":"Pepa","teléfonos":1234, "dirección":"calle1243", "ciudad de residencia":"Bogota" ,"calificación por ventas":2}})
 ```
 * Consultar productos de la tienda 
 ```js
@@ -75,6 +76,42 @@ db.inventario.insertOne( {"nombre producto":"Cepillo dental","Descripción del p
         }
 }
 ```
+* Consultar todos los productos que tengan existencias de la tienda.
+```js
+db.inventario.find({"Cantidad de inventario":{$gt:0}}).pretty()
+{
+        "_id" : ObjectId("6080e638152dc02b1fc55291"),
+        "nombre producto" : "Crema dental",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 12000,
+        "Cantidad de inventario" : 10,
+        "vendedor" : {
+                "nombre" : "Pepito",
+                "teléfonos" : 123,
+                "dirección" : "calle123",
+                "ciudad de residencia" : "Medellin",
+                "calificación por ventas" : 10
+        }
+}
+{
+        "_id" : ObjectId("6080e6c7152dc02b1fc55292"),
+        "nombre producto" : "Cepillo dental",
+        "Descripción del producto" : "descripcion",
+        "Fecha de creacion" : 240421,
+        "Precio" : 5000,
+        "Cantidad de inventario" : 140,
+        "vendedor" : {
+                "nombre" : "Panchito",
+                "teléfonos" : 1234,
+                "dirección" : "calle1243",
+                "ciudad de residencia" : "Bogota",
+                "calificación por ventas" : 8
+        }
+}
+
+```
+
 * Consultar la información de un vendedor por nombre.
 ``` js
  db.inventario.find({"vendedor.nombre":"Panchito"}).pretty()
