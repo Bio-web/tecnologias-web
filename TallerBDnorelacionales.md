@@ -316,7 +316,9 @@ db.inventario.find({"Descripción del producto":/aseo/}).pretty()
         }
 ```
 ● Consultar todos los productos cuyo nombre inicie por la letra “C”
-
+```js
+db.inventario.find({"nombre producto":/[C]/}).pretty().count()
+```
 ● Consultar el nombre y la descripción de los productos de un vendedor
 
 ● Consultar 10 productos ordenados por nombre alfabeticamente
