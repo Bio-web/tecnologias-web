@@ -288,6 +288,9 @@ db.inventario.find({"Cantidad de inventario":{$lt:50}}).pretty()
 ```
 ● Consultar los productos que fueron creados entre el 1 de enero de y el 31 de
 diciembre de 2020
+```js
+db.inventario.insertMany( [{"nombre producto":"Papel higienico","Descripción del producto":"aseo", "Fecha de creacion":311220 ,"Precio":12000 ,"Cantidad de inventario": 90, "vendedor":{"nombre":"Juanito","teléfonos":4567, "dirección":"calle1243", "ciudad de residencia":"Bucaramanga" ,"calificación por ventas":8}},{"nombre producto":"cereales","Descripción del producto":"granos", "Fecha de creacion":050120 ,"Precio":15000 ,"Cantidad de inventario": 89, "vendedor":{"nombre":"Pepa","teléfonos":4567, "dirección":"calle1243", "ciudad de residencia":"Barranquilla" ,"calificación por ventas":1}}])
+```
 
 ● Consultar todos los productos que contengan la palabra “aseo” en el nombre o en la
 descripción
