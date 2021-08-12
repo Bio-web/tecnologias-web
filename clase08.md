@@ -65,9 +65,12 @@ db.collections.dropIndex("nameIndex")
 db.collection.aggregate([{$match:{campo: valor}}, $group: {_id : "$year", numeroPeliculas:{$count:{}}} ])
 ```
 *match:* Filtro del campo
-*group:* Agrupación 
+
+*group:* Agrupación   
+
 *count:* Contador // Cúantas películas cumple el filtro
-*sum:* Sumador // 
+
+*sum:* Sumador 
 
 
 ### Ejemplo lookup:
