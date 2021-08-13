@@ -388,7 +388,13 @@ db.inventario.find({"nombre producto":/[A-Z]/}).sort({"nombre producto":-1}).pre
 }
 ```
 ● Consultar los 5 vendedores con mejor reputación de la tienda
-
+```js
+db.inventario.aggregate([{$group:{ _id:{nombre:"$vendedor.nombre"}, "calificación por ventas":{$first:"$vendedor.calificación por ventas"} } }, {$limit:5},{$sort:{"calificación por ventas":-1}} ]).pretty()
+{ "_id" : { "nombre" : "Pepito" }, "calificación por ventas" : 10 }
+{ "_id" : { "nombre" : "Juanito" }, "calificación por ventas" : 8 }
+{ "_id" : { "nombre" : "Panchito" }, "calificación por ventas" : 8 }
+{ "_id" : { "nombre" : "Pepa" }, "calificación por ventas" : 2 }
+```
 ● Consultar los productos con toda la información del vendedor
 ```js
 db.inventario.find(null,{"vendedor":1,"_id":0,"nombre producto":1}).pretty()
