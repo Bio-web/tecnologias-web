@@ -469,9 +469,18 @@ db.inventario.aggregate([ { $group:{ _id:{Vendedor:"$vendedor.nombre"}, Precio:{
 ```
 ● Para todos los vendedores consultar el nombre, el nombre y la cantidad de susproductos y el total de productos en inventario
 ```js
-> db.inventario.aggregate([ { $group:{ _id:{Vendedor:"$vendedor.nombre"}, Productos:{$push:"$nombre producto"},"Total Productos Inventario":{$sum:"$Cantidad de inventario"} } },{$addFields:{"Cantidad Productos":{$size:"$Productos"}}} ])
+db.inventario.aggregate([ { $group:{ _id:{Vendedor:"$vendedor.nombre"}, Productos:{$push:"$nombre producto"},"Total Productos Inventario":{$sum:"$Cantidad de inventario"} } },{$addFields:{"Cantidad Productos":{$size:"$Productos"}}} ])
 { "_id" : { "Vendedor" : "Pepa" }, "Productos" : [ "jabon", "cereales" ], "Total Productos Inventario" : 89, "Cantidad Productos" : 2 }
 { "_id" : { "Vendedor" : "Juanito" }, "Productos" : [ "caja de cervezas", "Papel higienico" ], "Total Productos Inventario" : 94, "Cantidad Productos" : 2 }
 { "_id" : { "Vendedor" : "Panchito" }, "Productos" : [ "Cepillo dental" ], "Total Productos Inventario" : 140, "Cantidad Productos" : 1 }
 { "_id" : { "Vendedor" : "Pepito" }, "Productos" : [ "Crema dental" ], "Total Productos Inventario" : 10, "Cantidad Productos" : 1 }
+```
+● Consultar el valor total de las ventas de la tienda en un año especifico, primero poblamos la base de datos con las ventas
+```js
+db.ventas.insertMany([{Fecha:new Date("2018-12-20T16:00:00Z"),Productos:[{nombre:"Crema dental",cantidad:2,precio:12000}],Total:24000},{Fecha:new Date("2019-01-05T21:58:00Z"),Productos:[{nombre:"Crema dental",cantidad:1,precio:12000},{nombre:"cereales",cantidad:2,precio:15000}],Total:42000},{Fecha:new Date("2018-12-15T01:34:00Z"),Productos:[{nombre:"Papel higienico",cantidad:3,precio:12000},{nombre:"Crema dental",cantidad:1,precio:12000}],Total:48000},{Fecha:new Date("2018-12-01T05:45:00Z"),Productos:[{nombre:"Crema dental",cantidad:1,precio:12000},{nombre:"caja de cervezas",cantidad:1,precio:60000},{nombre:"jabon",cantidad:5,precio:1000}],Total:77000},{Fecha:new Date("2018-10-31T18:35:00Z"),Productos:[{nombre:"Cepillo dental",cantidad:2,precio:5000},{nombre:"Crema dental",cantidad:2,precio:12000}],Total:34000},{Fecha:new Date("2018-11-20T10:14:00Z"),Productos:[{nombre:"Crema dental",cantidad:2,precio:12000}],Total:24000},{Fecha:new Date("2018-12-23T14:57:00Z"),Productos:[{nombre:"Crema dental",cantidad:2,precio:12000}],Total:24000}])
+```
+Ahora se muestra el valor para el año 2019.
+```js
+db.ventas.aggregate([{ $match:{$expr:{$eq:[{$year:"$Fecha"},2019]}}},{$group:{_id:null,"Total vendido 2019":{$sum:"$Total"}}},{$project:{_id:0}}])
+{ "Total vendido 2019" : 42000 }
 ```
