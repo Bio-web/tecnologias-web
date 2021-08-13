@@ -460,3 +460,18 @@ db.inventario.find(null,{"vendedor":1,"_id":0,"nombre producto":1}).pretty()
 }
 ```
 ● Consultar el valor del producto más caro que venda cada vendedor
+```js
+db.inventario.aggregate([ { $group:{ _id:{Vendedor:"$vendedor.nombre"}, Precio:{$max:"$Precio"} } }, { $sort:{Precio:-1} } ])
+{ "_id" : { "Vendedor" : "Juanito" }, "Precio" : 60000 }
+{ "_id" : { "Vendedor" : "Pepa" }, "Precio" : 15000 }
+{ "_id" : { "Vendedor" : "Pepito" }, "Precio" : 12000 }
+{ "_id" : { "Vendedor" : "Panchito" }, "Precio" : 5000 }
+```
+● Para todos los vendedores consultar el nombre, el nombre y la cantidad de susproductos y el total de productos en inventario
+```js
+> db.inventario.aggregate([ { $group:{ _id:{Vendedor:"$vendedor.nombre"}, Productos:{$push:"$nombre producto"},"Total Productos Inventario":{$sum:"$Cantidad de inventario"} } },{$addFields:{"Cantidad Productos":{$size:"$Productos"}}} ])
+{ "_id" : { "Vendedor" : "Pepa" }, "Productos" : [ "jabon", "cereales" ], "Total Productos Inventario" : 89, "Cantidad Productos" : 2 }
+{ "_id" : { "Vendedor" : "Juanito" }, "Productos" : [ "caja de cervezas", "Papel higienico" ], "Total Productos Inventario" : 94, "Cantidad Productos" : 2 }
+{ "_id" : { "Vendedor" : "Panchito" }, "Productos" : [ "Cepillo dental" ], "Total Productos Inventario" : 140, "Cantidad Productos" : 1 }
+{ "_id" : { "Vendedor" : "Pepito" }, "Productos" : [ "Crema dental" ], "Total Productos Inventario" : 10, "Cantidad Productos" : 1 }
+```
