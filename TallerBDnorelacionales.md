@@ -484,3 +484,107 @@ Ahora se muestra el valor para el año 2019.
 db.ventas.aggregate([{ $match:{$expr:{$eq:[{$year:"$Fecha"},2019]}}},{$group:{_id:null,"Total vendido 2019":{$sum:"$Total"}}},{$project:{_id:0}}])
 { "Total vendido 2019" : 42000 }
 ```
+● Consultar todos los productos vendidos por un vendedor específico, el valor total por
+factura y la fecha de venta
+```js
+db.ventas.aggregate([
+    {
+        $unwind:"$Productos"
+    },
+    {
+        $lookup:
+        {
+            from:"inventario",
+            let:{producto:"$Productos.nombre"},
+            pipeline:[
+                {
+                    $match:
+                    {
+                        $expr:
+                        {
+                            $eq:["$$producto","$nombre producto"]
+                        }
+                    }
+                },
+                {
+                    $project:{nombre:"$vendedor.nombre",_id:0}
+                }
+            ],
+            as:"Vendedor"
+        }
+    },
+    {
+        $match:
+        {
+            "Vendedor.nombre":"Pepa"
+        }
+    },
+    {
+        $unwind:"$Vendedor"
+    },
+    {
+        $group:
+        {
+            _id:{"Fecha venta":"$Fecha"},
+            Vendedor:{$first:"$Vendedor.nombre"},
+            Productos:{$push:"$Productos.nombre"},
+            "Total Fectura":{
+                $sum:{
+                    $multiply:["$Productos.cantidad","$Productos.precio"]
+                }
+            }
+        }
+    }
+]).pretty()
+{
+        "_id" : {
+                "Fecha venta" : ISODate("2018-12-01T05:45:00Z")
+        },
+        "Vendedor" : "Pepa",
+        "Productos" : [
+                "jabon"
+        ],
+        "Total Fectura" : 5000
+}
+{
+        "_id" : {
+                "Fecha venta" : ISODate("2019-01-05T21:58:00Z")
+        },
+        "Vendedor" : "Pepa",
+        "Productos" : [
+                "cereales"
+        ],
+        "Total Fectura" : 30000
+}
+```
+● Consultar la información de los 5 productos más vendidos de la tienda y el valor total
+vendido
+```js
+db.ventas.aggregate([
+    {
+        $unwind:"$Productos"
+    },
+    {
+        $group:{
+            _id: {"Producto":"$Productos.nombre"},
+            "Cantidad vendida":{$sum:"$Productos.cantidad"},
+            "Total Vendido":{
+                $sum:{
+                    $multiply:["$Productos.cantidad","$Productos.precio"]
+                }
+            }
+        }
+    },
+    {
+        $sort:{"Cantidad vendida":-1}
+    },
+    {
+        $limit:5
+    }
+])
+{ "_id" : { "Producto" : "Crema dental" }, "Cantidad vendida" : 11, "Total Vendido" : 132000 }
+{ "_id" : { "Producto" : "jabon" }, "Cantidad vendida" : 5, "Total Vendido" : 5000 }
+{ "_id" : { "Producto" : "Papel higienico" }, "Cantidad vendida" : 3, "Total Vendido" : 36000 }
+{ "_id" : { "Producto" : "cereales" }, "Cantidad vendida" : 2, "Total Vendido" :30000 }
+{ "_id" : { "Producto" : "Cepillo dental" }, "Cantidad vendida" : 2, "Total Vendido" : 10000 }
+```
