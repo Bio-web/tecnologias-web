@@ -820,3 +820,138 @@ db.ventas.aggregate([
         "Total vendido vendedor" : 132000
 }
 ```
+● Consultar los 5 productos más vendidos en la tienda en un mes específico
+``` js
+db.ventas.aggregate([
+    {
+        $unwind:"$Productos"
+    },
+    {
+        $match:{
+            $expr:{
+                $and:[
+                    {$eq:[{$month:"$Fecha"},12]},
+                    {$eq:[{$year:"$Fecha"},2018]}
+                ]
+            }
+        }
+    },
+    {
+        $group:{
+            _id:{
+                mes:{$month:"$Fecha"},
+                "año":{$year:"$Fecha"},
+                "Producto":"$Productos.nombre"
+            },
+            "Cantidad vendida":{$sum:"$Productos.cantidad"}
+        }
+    },
+    {
+        $sort:{"Cantidad vendida":-1}
+    },
+    {
+        $limit:5
+    }
+]).pretty()
+{
+        "_id" : {
+                "mes" : 12,
+                "año" : 2018,
+                "Producto" : "Crema dental"
+        },
+        "Cantidad vendida" : 6
+}
+{
+        "_id" : {
+                "mes" : 12,
+                "año" : 2018,
+                "Producto" : "jabon"
+        },
+        "Cantidad vendida" : 5
+}
+{
+        "_id" : {
+                "mes" : 12,
+                "año" : 2018,
+                "Producto" : "Papel higienico"
+        },
+        "Cantidad vendida" : 3
+}
+{
+        "_id" : {
+                "mes" : 12,
+                "año" : 2018,
+                "Producto" : "caja de cervezas"
+        },
+        "Cantidad vendida" : 1
+}
+```
+● Consultar el promedio de las ventas por mes de cada vendedor
+```js
+db.ventas.aggregate([
+    {
+        $unwind:"$Productos"
+    },
+    {
+        $group:{
+            _id: {
+                mes:{$month:"$Fecha"},
+                "año":{$year:"$Fecha"},
+                "Producto":"$Productos.nombre"
+            },
+            "Total Vendido":{
+                $sum:{
+                    $multiply:["$Productos.cantidad","$Productos.precio"]
+                }
+            }
+        }
+    },
+    {
+        $lookup:
+        {
+            from:"inventario",
+            let:{producto:"$_id.Producto"},
+            pipeline:[
+                {
+                    $match:
+                    {
+                        $expr:
+                        {
+                            $eq:["$$producto","$nombre producto"]
+                        }
+                    }
+                },
+                {
+                    $project:{
+                        nombre:"$vendedor.nombre",
+                        _id:0
+                    }
+                }
+            ],
+            as:"Vendedor"
+        }
+    },
+    {
+        $unwind:"$Vendedor"
+    },
+    {
+        $group:{
+            _id:{"Vendedor":"$Vendedor.nombre",
+                mes:"$mes",
+                "año":"$año",
+            },
+            "Total mes":{$sum:"$Total Vendido"}
+        }
+    },
+    {
+        $group:{
+            _id:{"Vendedor":"$_id.Vendedor"},
+            "Promedio por mes":{$avg:"$Total mes"}
+        }
+    }
+]).pretty()
+{ "_id" : { "Vendedor" : "Pepa" }, "Promedio por mes" : 35000 }
+{ "_id" : { "Vendedor" : "Juanito" }, "Promedio por mes" : 96000 }
+{ "_id" : { "Vendedor" : "Panchito" }, "Promedio por mes" : 10000 }
+{ "_id" : { "Vendedor" : "Pepito" }, "Promedio por mes" : 132000 }
+```
