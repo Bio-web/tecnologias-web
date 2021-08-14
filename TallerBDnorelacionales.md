@@ -581,10 +581,242 @@ db.ventas.aggregate([
     {
         $limit:5
     }
-])
-{ "_id" : { "Producto" : "Crema dental" }, "Cantidad vendida" : 11, "Total Vendido" : 132000 }
-{ "_id" : { "Producto" : "jabon" }, "Cantidad vendida" : 5, "Total Vendido" : 5000 }
-{ "_id" : { "Producto" : "Papel higienico" }, "Cantidad vendida" : 3, "Total Vendido" : 36000 }
-{ "_id" : { "Producto" : "cereales" }, "Cantidad vendida" : 2, "Total Vendido" :30000 }
-{ "_id" : { "Producto" : "Cepillo dental" }, "Cantidad vendida" : 2, "Total Vendido" : 10000 }
+]).pretty()
+{
+        "_id" : {
+                "Producto" : "Crema dental"
+        },
+        "Cantidad vendida" : 11,
+        "Total Vendido" : 132000
+}
+{
+        "_id" : {
+                "Producto" : "jabon"
+        },
+        "Cantidad vendida" : 5,
+        "Total Vendido" : 5000
+}
+{
+        "_id" : {
+                "Producto" : "Papel higienico"
+        },
+        "Cantidad vendida" : 3,
+        "Total Vendido" : 36000
+}
+{
+        "_id" : {
+                "Producto" : "Cepillo dental"
+        },
+        "Cantidad vendida" : 2,
+        "Total Vendido" : 10000
+}
+{
+        "_id" : {
+                "Producto" : "cereales"
+        },
+        "Cantidad vendida" : 2,
+        "Total Vendido" : 30000
+}
+```
+● Consultar el total vendido de cada producto de los vendedores de la tienda, mostrar
+el nombre del vendedor y la lista de productos con nombre y valor total vendido.
+```js
+db.ventas.aggregate([
+    {
+        $unwind:"$Productos"
+    },
+    {
+        $lookup:
+        {
+            from:"inventario",
+            let:{producto:"$Productos.nombre"},
+            pipeline:[
+                {
+                    $match:
+                    {
+                        $expr:
+                        {
+                            $eq:["$$producto","$nombre producto"]
+                        }
+                    }
+                },
+                {
+                    $project:{nombre:"$vendedor.nombre",_id:0}
+                }
+            ],
+            as:"Vendedor"
+        }
+    },
+    {
+        $unwind:"$Vendedor"
+    },
+    {
+        $group:{
+            _id: {"Producto":"$Productos.nombre"},
+            Vendedor:{$first:"$Vendedor.nombre"},
+            "Cantidad vendida":{$sum:"$Productos.cantidad"},
+            "Total Vendido":{
+                $sum:{
+                    $multiply:["$Productos.cantidad","$Productos.precio"]
+                }
+            }
+        }
+    },
+    {
+        $group:{
+            _id:{Vendedor:"$Vendedor"},
+            "Productos":{$push:{
+                nombre:"$_id.Producto",
+                "cantidad vendida":"$Cantidad vendida",
+                "total vendido producto":"$Total Vendido"
+            }
+            },
+            "Total vendido vendedor":{$sum:"$Total Vendido"}
+        }
+    }
+]).pretty()
+{
+        "_id" : {
+                "Vendedor" : "Pepa"
+        },
+        "Productos" : [
+                {
+                        "nombre" : "cereales",
+                        "cantidad vendida" : 2,
+                        "total vendido producto" : 30000
+                },
+                {
+                        "nombre" : "jabon",
+                        "cantidad vendida" : 5,
+                        "total vendido producto" : 5000
+                }
+        ],
+        "Total vendido vendedor" : 35000
+}
+{
+        "_id" : {
+                "Vendedor" : "Juanito"
+        },
+        "Productos" : [
+                {
+                        "nombre" : "caja de cervezas",
+                        "cantidad vendida" : 1,
+                        "total vendido producto" : 60000
+                },
+                {
+                        "nombre" : "Papel higienico",
+                        "cantidad vendida" : 3,
+                        "total vendido producto" : 36000
+                }
+        ],
+        "Total vendido vendedor" : 96000
+}
+{
+        "_id" : {
+                "Vendedor" : "Panchito"
+        },
+        "Productos" : [
+                {
+                        "nombre" : "Cepillo dental",
+                        "cantidad vendida" : 2,
+                        "total vendido producto" : 10000
+                }
+        ],
+        "Total vendido vendedor" : 10000
+}
+{
+        "_id" : {
+                "Vendedor" : "Pepito"
+        },
+        "Productos" : [
+                {
+                        "nombre" : "Crema dental",
+                        "cantidad vendida" : 11,
+                        "total vendido producto" : 132000
+                }
+        ],
+        "Total vendido vendedor" : 132000
+}
+```
+● Consultar la información del vendedor con más ventas de la tienda
+```js
+db.ventas.aggregate([
+    {
+        $unwind:"$Productos"
+    },
+    {
+        $group:{
+            _id: {"Producto":"$Productos.nombre"},
+            "Total Vendido":{
+                $sum:{
+                    $multiply:["$Productos.cantidad","$Productos.precio"]
+                }
+            }
+        }
+    },
+    {
+        $lookup:
+        {
+            from:"inventario",
+            let:{producto:"$_id.Producto"},
+            pipeline:[
+                {
+                    $match:
+                    {
+                        $expr:
+                        {
+                            $eq:["$$producto","$nombre producto"]
+                        }
+                    }
+                },
+                {
+                    $project:{
+                        nombre:"$vendedor.nombre",
+                        "teléfonos" :"$vendedor.teléfonos",
+                        "dirección" :"$vendedor.dirección",
+                        "ciudad de residencia":"$vendedor.ciudad de residencia",
+                        "calificación por ventas" :"$vendedor.calificación por ventas",
+                        _id:0
+                    }
+                }
+            ],
+            as:"Vendedor"
+        }
+    },
+    {
+        $unwind:"$Vendedor"
+    },
+    {
+        $group:{
+            _id:{Vendedor:"$Vendedor.nombre"},
+            info:{
+                $first:{
+                    "teléfonos" :"$Vendedor.teléfonos",
+                    "dirección" :"$Vendedor.dirección",
+                    "ciudad de residencia":"$Vendedor.ciudad de residencia",
+                    "calificación por ventas" :"$Vendedor.calificación por ventas",
+                }
+            },
+            "Total vendido vendedor":{$sum:"$Total Vendido"}
+        }
+    },
+    {
+        $sort:{"Total vendido vendedor":-1}
+    },
+    {
+        $limit:1
+    }
+]).pretty()
+{
+        "_id" : {
+                "Vendedor" : "Pepito"
+        },
+        "info" : {
+                "teléfonos" : 123,
+                "dirección" : "calle123",
+                "ciudad de residencia" : "Medellin",
+                "calificación por ventas" : 10
+        },
+        "Total vendido vendedor" : 132000
+}
 ```
