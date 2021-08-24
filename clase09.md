@@ -250,7 +250,7 @@ Usando la etiqueta *style* dentro del *head* del html se puede aplicar estilos a
 ```
 ![image](https://user-images.githubusercontent.com/80167676/130702060-ba6fc1ba-61e5-4acd-b720-c3b3bb1ff553.png)
 
-### External
+### Externos
 
 Se puede importar un archivo CSS externo en el cual están guardados los estilos a usar. Usando estos archivos se pueden aplicar estilos en diferentes páginas sin necesidad de reescribirlos. Se importa usando la etiqueta *link* en el head de la página.
 	
@@ -262,7 +262,7 @@ Se puede importar un archivo CSS externo en el cual están guardados los estilos
 En la hoja de estilos
 ```css
 /* Aplica selección por clase y por tag */
-.menu ul li a{/* Selecciona los anchor en el mneú */
+.menu ul li a{/* Selecciona los anchor en el menú */
     color: yellow;
 }
 ```
@@ -278,3 +278,30 @@ También se puede seleccionar por id de la siguiente manera
 }
 ```
 ![image](https://user-images.githubusercontent.com/80167676/130703118-88d1c771-763b-4590-911f-6ff02c338b76.png)
+
+## Estilos de texto
+
+Hay muchas propiedades que se pueden modificar en un texto, entre ellas están.
+
+	• "color" que modifica el color del texto.
+	• "font-size" que cambia el tamaño de la fuente.
+	• "font-family" permite seleccionar otra familia de fuente, cambiando el tipo de letra.
+	• "text-transofrm" que incluye aplicar transformaciones como capitalizar primera letra, poner todo en mayúsculas o en minusculas.
+	• "font-style" la cual cambia el estilo de la fuente(itálica, negrilla, normal…).
+	• "line-height" que mueve la línea sobre la que se escribe el texto.
+	• "text-align" que controla la alineación del texto.
+
+```html	
+<p class="text">Texto de prueba</p>
+```
+```css
+.text {
+    color: yellowgreen;
+    font-size: 25;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 5;
+    text-align: center;
+}
+```
+![image](https://user-images.githubusercontent.com/80167676/130703908-ab8112fb-fd40-4047-b63b-6d280205fbfa.png)
