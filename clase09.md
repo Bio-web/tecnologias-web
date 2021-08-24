@@ -201,12 +201,53 @@ Un ejemplo de uso de dichas etiquetas se muestra a continuación.
 	</main>
 </section>
 ```
-![image](https://user-images.githubusercontent.com/80167676/130699784-f5655d9c-b417-404f-b108-73a6b963ad1d.png)
+
+# CSS
 
 Es la capa de estilo de las páginas web. Consiste en numerosas propiedades que se usan para darle formato al contenido: fuentes, espaciado y ubicación. Todo esto se logra estableciendo reglas que tienen la siguiente forma.
 
-
 ![image](https://user-images.githubusercontent.com/80167676/130700074-830c0bed-ed9b-48f9-8305-2ae1383d4104.png)
-enido: fuentes
+	
+Las propiedades que CSS puede modificar dependen del elemento que se esté modificando. Para modificar determinados elementos del documento es importante tener en cuenta dos atributos de los elementos html, estos son, las clases o *class* y el *id* los cuales permiten aplicar cambios a varios elementos o a uno en específico, respectivamente.
 
+```html
+<nav id="menu-principal" class="menu">
+    <ul>
+	<li><a href="#">enlace menu 1</a></li>
+	<li><a href="#">enlace menu 2</a></li>
+	<li><a href="#">enlace menu 3</a></li>
+	<li><a href="#">enlace menu 4</a></li>
+	<li><a href="#">enlace menu 5</a></li>
+    </ul>
+</nav>	
+```	
+![image](https://user-images.githubusercontent.com/80167676/130701081-369d1fa0-f3d7-4a0d-806b-c95ff16eb5fe.png)
+	
+## Aplicar estilos
 
+Hay tres maneras de aplicar estilos en CSS.
+
+### Inline
+
+Usando el atributo style de los elementos html es posible cambiar propiedades de un elemento específico.
+
+```html
+<p style="color: red">Texto de prueba</p>
+```
+![image](https://user-images.githubusercontent.com/80167676/130701631-ca7ca67d-f63a-43d6-a116-6dc65d77b12c.png)
+
+### Internos
+
+Usando la etiqueta *style* dentro del *head* del html se puede aplicar estilos a toda la página.
+	
+```html
+<style>
+    h1 {/* Se selecciona todas las etiquetas h1 de la página */
+	color: salmon;/* Cambio de color */
+	text-align: center;/* Cambio de alineación de texto */
+    }
+</style>	
+```
+![image](https://user-images.githubusercontent.com/80167676/130702060-ba6fc1ba-61e5-4acd-b720-c3b3bb1ff553.png)
+
+### External
