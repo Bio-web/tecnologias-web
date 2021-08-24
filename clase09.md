@@ -70,6 +70,7 @@ Hay 6 niveles de títulos que se pueden usar en html, a menor el nivel más gran
 <h2>Título 2</h2>
 <h3>Título 3</h3>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699209-0009d2fa-7e2b-4ef0-9b8b-70cc1311f0f4.png)
 
 ### Párrafos
 
@@ -78,16 +79,16 @@ Es texto simple.
 ```html
 <p>Texto de prueba</p>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699261-a22c5f5e-c2d7-4466-8089-4d172849d582.png)
 
 ### Texto en negrilla y en itálica
 
 Se puede resaltar texto cuando se busca darle importancia o énfasis usando estas etiquetas, se recomienda usar las nuevas versiones de la etiquetas de resaltado y italización ya que estas acarrean un significado semántico que ayuda a optimizar las búsquedas web.
 
 ```html
-<p>
-	orem ipsum dolor sit amet <b>adipisicing</b> elit. Ullam labore blanditiis eum <strong>necessitatibus</strong>  eius maiores numquam dolorum <i>repellendus dignissimos!</i>  Laborum debitis sunt voluptate! Placeat <em>aliquid aut eveniet</em>  amet quia magni.
-</p>
+<p> orem ipsum dolor sit amet <b>adipisicing</b> elit. Ullam labore blanditiis eum <strong>necessitatibus</strong>  eius maiores numquam dolorum <i>repellendus dignissimos!</i>  Laborum debitis sunt voluptate! Placeat <em>aliquid aut eveniet</em>  amet quia magni.</p>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699336-96ca9a65-9ed2-40f7-9890-95c1a5e475c6.png)
 
 ## Listas
 
@@ -104,6 +105,7 @@ Listas cuyo orden importa y por lo tanto sus elementos son enumerados por defect
 	<li>item 3</li>
 </ol>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699460-c61a2670-1c29-4d4f-962f-e2eaa4c71b24.png)
 
 ### Listas sin orden
 
@@ -116,6 +118,7 @@ Son listas en las que el orden no importa y por lo tanto no están numeradas, lo
 	<li>item 3</li>
 </ul>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699477-1eb66071-5229-4542-bf84-ba9b61a8cf59.png)
 
 ### Listas de descripción
 
@@ -129,6 +132,7 @@ No son muy usadas, similares a diccionarios que almacenan términos con sus resp
 	<dd>Bebida color blanco</dd>
 </dl>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699514-afeb2ffd-28c2-467d-b388-97c41d63895b.png)
 
 ## Imágenes
 
@@ -144,10 +148,11 @@ Elementos que por medio de un clic nos permiten movernos a partes determinadas d
 ```html
 <a href="http://www.pagina.com">Enlace</a>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699665-d2605e2e-61ec-4b90-9a45-7930d4ae83a8.png)
 
 ## Etiquetas semánticas
 
-Con el objetivo de facilitar el trabajo de los buscadores se han introducido etiquetas que subdividen la página web en partes importantes, de  manera que los algoritmos de los buscadores pueden encontrar fácilmente determinadas partes de las mismas.
+Con el objetivo de facilitar el trabajo de los buscadores se han introducido etiquetas que subdividen la página web en partes importantes, de  manera que los algoritmos de los buscadores pueden encontrar fácilmente determinadas partes de las mismas. No agregan visualmente al sitio pero si a su funcionalidad.
 
 ### nav
 
@@ -196,9 +201,10 @@ Un ejemplo de uso de dichas etiquetas se muestra a continuación.
 	</main>
 </section>
 ```
+![image](https://user-images.githubusercontent.com/80167676/130699784-f5655d9c-b417-404f-b108-73a6b963ad1d.png)
 
 # CSS
 
 Es la capa de estilo de las páginas web. Consiste en numerosas propiedades que se usan para darle formato al contenido: fuentes
-![image](https://user-images.githubusercontent.com/80167676/130698705-86b0217e-161c-4784-b5a4-2d861f170d62.png)
+
 
