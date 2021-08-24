@@ -203,8 +203,10 @@ Un ejemplo de uso de dichas etiquetas se muestra a continuación.
 ```
 ![image](https://user-images.githubusercontent.com/80167676/130699784-f5655d9c-b417-404f-b108-73a6b963ad1d.png)
 
-# CSS
+Es la capa de estilo de las páginas web. Consiste en numerosas propiedades que se usan para darle formato al contenido: fuentes, espaciado y ubicación. Todo esto se logra estableciendo reglas que tienen la siguiente forma.
 
-Es la capa de estilo de las páginas web. Consiste en numerosas propiedades que se usan para darle formato al contenido: fuentes
+
+![image](https://user-images.githubusercontent.com/80167676/130700074-830c0bed-ed9b-48f9-8305-2ae1383d4104.png)
+enido: fuentes
 
 
