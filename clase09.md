@@ -251,3 +251,30 @@ Usando la etiqueta *style* dentro del *head* del html se puede aplicar estilos a
 ![image](https://user-images.githubusercontent.com/80167676/130702060-ba6fc1ba-61e5-4acd-b720-c3b3bb1ff553.png)
 
 ### External
+
+Se puede importar un archivo CSS externo en el cual están guardados los estilos a usar. Usando estos archivos se pueden aplicar estilos en diferentes páginas sin necesidad de reescribirlos. Se importa usando la etiqueta *link* en el head de la página.
+	
+```html
+<!-- Se importa la hoja de estilos styleTest.css -->
+<link rel="stylesheet" href="styleTest.css">
+```
+
+En la hoja de estilos
+```css
+/* Aplica selección por clase y por tag */
+.menu ul li a{/* Selecciona los anchor en el mneú */
+    color: yellow;
+}
+```
+El menu con la clase "menu" se ve modificado.
+	
+![image](https://user-images.githubusercontent.com/80167676/130702730-f328a06e-1c98-403c-96a8-9640b0f59ccf.png)
+
+También se puede seleccionar por id de la siguiente manera
+```css
+/* Selección por id */
+#menu-principal {
+    text-transform: capitalize;
+}
+```
+![image](https://user-images.githubusercontent.com/80167676/130703118-88d1c771-763b-4590-911f-6ff02c338b76.png)
