@@ -262,7 +262,7 @@ Se puede importar un archivo CSS externo en el cual están guardados los estilos
 En la hoja de estilos
 ```css
 /* Aplica selección por clase y por tag */
-.menu ul li a{/* Selecciona los anchor en el menú */
+.menu ul li a {/* Cadena de selectores, los anchor  contenidos dentro de las tags y clases especificadas */
     color: yellow;
 }
 ```
@@ -292,16 +292,44 @@ Hay muchas propiedades que se pueden modificar en un texto, entre ellas están.
 	• "text-align" que controla la alineación del texto.
 
 ```html	
-<p class="text">Texto de prueba</p>
+<p class="text mayuscula">Texto de prueba</p>
 ```
 ```css
 .text {
     color: yellowgreen;
     font-size: 25;
-    text-transform: uppercase;
     font-style: italic;
+    font-family: 'Times New Roman', Times, serif;/* Fallback en caso de no cargar fuente */
     line-height: 5;
     text-align: center;
 }
+	
+.text.mayuscula {/* Cadena de selectores, que tenga ambas clases */
+    text-transform: uppercase;
+}		
 ```
 ![image](https://user-images.githubusercontent.com/80167676/130703908-ab8112fb-fd40-4047-b63b-6d280205fbfa.png)
+
+## Colores
+  
+Hay varias maneras de especificar colores  en CSS, ya sea por nombre, por código rgb o por hexadecimal.
+	
+```html
+<div class="bloque-color">
+    <p>Texto</p>
+</div>
+```
+
+```css
+.bloque-color {
+    color: teal;
+    background-color: rgb(255, 0, 0);
+    
+}
+
+.bloque-color p {
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+```
+![image](https://user-images.githubusercontent.com/80167676/130705805-a8638da2-d724-4b96-b943-48b5ce99166b.png)	
