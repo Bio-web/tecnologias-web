@@ -574,7 +574,9 @@ Ajusta cualquier tipo de pantalla respecto a su tamaño
 Enlaces de interés:
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+	
 https://flexboxfroggy.com/
+	
 https://css-tricks.com/snippets/css/complete-guide-grid/
 
 
