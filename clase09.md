@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tecnologías del Desarrollo Web(HTM & CSS)
+title: Tecnologías del Desarrollo Web(HTML & CSS)
 author: Santiago Henao González
 date: 2021-08-24
 ---
@@ -333,3 +333,260 @@ Hay varias maneras de especificar colores  en CSS, ya sea por nombre, por códig
 }
 ```
 ![image](https://user-images.githubusercontent.com/80167676/130705805-a8638da2-d724-4b96-b943-48b5ce99166b.png)	
+
+## Continuación de la clase CSS
+Se pueden utilizar en todos los elementos sin tener que especificar la clase
+1. `first-child` : Le aplica el estilo al primer elemento que encuentre de esa clase
+2. `last-child` : Le aplica el estilo al último elemento que encuentre de esa clase
+3. `nth-child(X)` : Le aplica el estilo al n-ésimo elemento que encuentre de esa clase y la X significa el número al que se va asignar el estilo. También puede darse el parámetro de 'odd' para coger los items impares 
+
+Para generar una lista de varias items de manera automática se puede utilizar lo siguiente: 
+```js
+    <header>
+        <nav>
+            ul> li*10{item $}        
+    
+        </nav>
+
+    </header>  
+
+```
+En el último item de la lista presentada se aplicará el estilo css
+
+```css
+.lista li: last-child(4){
+
+    color= blue
+}
+```
+### Estilos de enlaces
+- Link : Aparece el link en pantalla
+- visited  : Cuando se visita el enlace
+- hover : Estilo que se aplica cuando se pasa el mouse por el enlace
+- active : Estilo que se aplica cuando da click en el enlace
+
+```css
+.enlace li: a: link { 
+    color= dark
+    text-decoration:none /* Sin subrayado */
+    font-size: 20px /* Tamaño de la fuente */
+}
+
+.enlace li: a: visited { 
+    color= blue /* Cuando se visita el enlace queda marcado en azul */
+}
+    
+}
+.enlace li: a: hover { 
+    color= dark
+    text_decoration:underline /* Subraya cada que pasa por el enlace */
+}
+
+.enlace li: a: active { 
+    color= dark
+    text_decoration:underline /* Subraya cada que pasa por el enlace */
+}
+```
+
+## CSS BOX MODEL
+![image](https://user-images.githubusercontent.com/64289042/131204196-264c3562-39dc-43db-a961-e7a54552a21b.png)
+
+
+### Espaciado y dimensiones
+ * Padding 
+ * Margin
+ * Width
+ * Height
+
+
+```css
+.box {
+    color= white;
+    background-color:black  /* Fondo de la margen */
+    font-size= 50px;
+    display: inline /* Se ajusta al espacio, por defeto en block  */
+    /* COn el parámetro inline no se pueden ajustar los tamaño en cambio si inline-block si lo deja editar */
+    border: 10px solid red  /*  Tamaño-tipo de borde(punteado, sólido-color)  */
+     /* El padding se puede ajustar para todos los lados, o solo para uno en específico  */
+    padding-top=20px;  /* Ajusta el alto puede cambiarse por left, right, bottom */
+    padding-bottom=20px; 
+    padding-right=20px; 
+    padding-left=20px; 
+/* Se pueden ajustar los 4 parámetros en una línea */
+/* Padding: Top, right, botton,left */
+    padding= 20px 40px 10px 13px; 
+    margin= 40px 20px /* Margin:Top, botton */
+    position=absolute;/* Sobresale sobre los demás elementos*/
+}
+
+```
+## ELEMENTOS BLOQUE
+- Son formateados visualmente como bloques
+- Ocupan el 100% del ancho del elemento padre
+- Son apilados verticalemente por defecto uno tras otro
+
+## ELEMENTOS EN LÍNEAS
+ - Ocupan solo el espacio necesario que ocupa su contenido
+ - NO hay saltos de línea antes o después del elemento
+ - No se aplican altos y anchos
+ - Los padding y los margin solo se aplican horizontalmente
+
+## POSICIONAMIENTO ABSOLUTO
+● El posicionamiento por defecto es el relativo, los elementos se posicionan uno después de otro dependiendo del orden que tenga en el código HTML. Estilo: position: relative
+
+● En el posicionamiento absoluto los elementos no afectan a los demás y estos son superpuestos
+
+● Estilo: position: absolute.
+
+● Se usa top, left, bottom, right para posicionar el elemento con respecto al elemento padre con posición relativa.
+
+## PSEUDO-ELEMENTOS
+
+● before
+
+● after
+
+```css
+a.enlaces li: before{
+    content: "=>";
+    color: blue;
+    margin-right: 10px;
+};
+
+
+```
+## LAYOUTS(Manejo de las planillas)
+Sirven apra cambiar el posicionamiento de los elementos en la página web
+● floats: Elementos flotantes
+
+● flex-box: Elementos flexibles
+
+● grid: Cuadrilla
+
+En caso de que los flotantes interfieran en el espacio de otros elementos, se debe de aplicar el siguiente comando:
+```html
+<div class="clear"></div>
+```
+```css
+.clear{
+    clear:both;
+    }
+```
+
+* FLOATS
+```js
+ul.floats>li*4>{item $}
+-->
+        <ul class="floats">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+```
+Aplicando el estilo a cada layouts
+```css
+.floats{
+    padding:0;
+    margin:0;
+}
+
+.floats li {
+    list-style: none;
+    background-color:yellow ;
+    display: inline-block; /* Separa por bloques dejando modficar el tamaño */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px /* No se toma todo el ancho*/
+    float: left; /*Elegir si apila los elemntos a la izquierda-derecha*/
+    margin-right: 10px; 
+
+}
+```
+
+* flex-box:
+```css
+.flex {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    }
+
+.flex div {
+    width:100px;
+    height: 100px;
+    background: red;
+    margin-right:10px;
+    margin-bottom:10px;
+    }
+
+.flex div.small {/* No se toma todo el ancho*/
+    width:50px;
+    height:50px;
+
+    }
+
+.flex.column {/* No se toma todo el ancho*/
+    flex-direction:row;  
+    justify-content:space-between;
+    
+    width:50px;
+    height:50px;
+
+    }
+```
+* grid
+
+```css
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr; /* Dos columnas con el tamaño de una fracción */ 
+}
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr; /* Dos columnas con el tamaño de una fracción */
+    gap:10px;/* Separar por bloques */
+
+    
+}
+.grid div{
+    background-color:yelow;
+    border:1px solid black; /* Divide */
+    
+}
+```
+## RESPONSIVE
+
+Ajusta cualquier tipo de pantalla respecto a su tamaño
+* Media Querys
+
+```js
+@media only screem and (min-width: 768px){
+    .box{
+    width:300px;
+    height:300px;
+
+    }
+
+}
+```
+Enlaces de interés:
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://flexboxfroggy.com/
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
