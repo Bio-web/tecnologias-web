@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tecnologías del Desarrollo Web(HTML & CSS)
-author: Santiago Henao González
-date: 2021-08-24
+author: Santiago Henao González y Luisa María Zapata Saldarriaga
+date: 2021-08-14 - 2021-08-21 
 ---
 # Frontend
 
