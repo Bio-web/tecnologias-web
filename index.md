@@ -12,3 +12,4 @@ Lista de clases
 - [Clase 07: MongoDB: Metodos, filtros y operadores](https://bio-web.github.io/tecnologias-web/clase07)
 - [Clase 08: MongoDB: índices y agregación ](https://bio-web.github.io/tecnologias-web/clase08)
 - [Clase 09: Tecnologias de Desarrollo Web: HTML y CSS](https://bio-web.github.io/tecnologias-web/clase09)
+- [Proyecto 2: Bases de datos no relacionales](https://bio-web.github.io/tecnologias-web/BD_no_relacionales)
