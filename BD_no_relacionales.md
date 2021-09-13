@@ -24,11 +24,11 @@ Esta coleccion tendra los dispositivos existentes en cada ubicacion fisica del h
 
 * **nombreDispositivo**: Campo tipo string que hace referencia al nombre del dispositivo
 * **tipo**: Lista de colecciones con datos de marca, modelo, proveedor y registro invima de un dispositivo
-*     **id**: Identificador alfanumerico unico que representa un dispositivo segun marca y modelo
-*     **marca**: Campo tipo string que guarda el nombre de la marca
-*     **modelo**: Campo tipo string que guarda el nombre del modelo
-*     **proveedor**: Campo tipo string que guarda el nombre del proveedor
-*     **registroInvima**: Campo tipo string que guarda el registro invima del dispositivo
+* **id**: Identificador alfanumerico unico que representa un dispositivo segun marca y modelo
+* **marca**: Campo tipo string que guarda el nombre de la marca
+* **modelo**: Campo tipo string que guarda el nombre del modelo
+* **proveedor**: Campo tipo string que guarda el nombre del proveedor
+* **registroInvima**: Campo tipo string que guarda el registro invima del dispositivo
 * **tipoFuncionamiento**: Campo tipo string que almacena el tipo de funcionamiento, puede ser mecanico, electromecanico o electrico
 * **tipoRiesgo**: Campo tipo string indica el tipo de riesgo segun la legislacion colombiana
 
@@ -38,8 +38,8 @@ Esta coleccion tendra los dispositivos existentes en cada ubicacion fisica del h
 * **nombreDispositivo**: Campo tipo string que hace referencia al nombre del dispositivo
 * **tipoDispositivo**: Identificador alfanumerico unico que identifica un dispositivo desde la coleccion inventario
 * **ubicacionDispositivo**: coleccion que identifica la ubicacion de un dispositivo segun el piso y habitacion
-*     **piso**: Campo tipo numerico que identifica el piso donde esta el dispositivo
-*     **habitacion**: Campo tipo alfanumerico que identifica la habitacion especifica donde se encuentra el dispositivo
+* **piso**: Campo tipo numerico que identifica el piso donde esta el dispositivo
+* **habitacion**: Campo tipo alfanumerico que identifica la habitacion especifica donde se encuentra el dispositivo
 * **fechaMantenimiento**: Campo tipo fecha con formato ISO donde se guarda la fecha del ultimo mantenimiento realizado
 * **estado**: campo numerico que indica si el dispositivo esta en uso
 * **cantidad**: campo numerico que indica la cantidad de dispositivos en la ubicacion
@@ -59,9 +59,9 @@ Esta coleccion contiene la informacion de login y permisos de los usuarios para 
 * **User**: Campo tipo string que hace referencia al nombre del usuario
 * **Password**: Campo tipo string que hace referencia a la contraseña del usuario
 * **permisos**: Coleccion que especifica que permisos tiene cada usuario
-*     **Leer**: Valor numerico que indica si puede o no leer la informacion de la base de datos
-*     **Editar**: Valor numerico que indica si puede o no editar la informacion de la base de datos
-*     **Eliminar**: Valor numerico que indica si puede o no eliminar la informacion de la base de datos
+* **Leer**: Valor numerico que indica si puede o no leer la informacion de la base de datos
+* **Editar**: Valor numerico que indica si puede o no editar la informacion de la base de datos
+* **Eliminar**: Valor numerico que indica si puede o no eliminar la informacion de la base de datos
 
 ## Referencias
 
