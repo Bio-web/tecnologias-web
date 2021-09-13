@@ -84,7 +84,8 @@ La relacion entre la coleccion de Proveedores e Inventarios es de muchos a uno, 
 ![image](https://user-images.githubusercontent.com/64289108/132766682-f3877a5f-682e-4724-a995-dcbd41470a08.png)
 
 ## Consultas
-1. Se requiere el nombre de los proveedores para el dispositivo regulador de vacío, únicamente los que se encuentren en el segundo piso
+
+**1- Se requiere el nombre de los proveedores para el dispositivo regulador de vacío, únicamente los que se encuentren en el segundo piso**
 
 ```js
 db.Existencias.aggregate([
@@ -129,6 +130,7 @@ db.Existencias.aggregate([
     }
 ]).pretty()
 ```
+Resultado de la consulta: 
 ```js
 {
     "proveedor" : "FLOW METER",
@@ -169,7 +171,7 @@ db.Existencias.aggregate([
 ```
 
 
-2. Una bomba de infusión requiere un repuesto y se desea contactar al proveedor para solicitar uno nuevo. Consultar los datos de los proveedores de bomba de infusión	
+**2- Una bomba de infusión requiere un repuesto y se desea contactar al proveedor para solicitar uno nuevo. Consultar los datos de los proveedores de bomba de infusión	**
 
 ``` js
 db.Inventario.aggregate([
@@ -213,6 +215,7 @@ db.Inventario.aggregate([
     },
 ]).pretty()
 ```
+Resultado de la consulta: 
 ``` js
 {
     "nombre" : "AT. MEDICAS",
@@ -226,7 +229,7 @@ db.Inventario.aggregate([
 }
 ```
 
-3. Con el fin de llevar un registro de inventario, se requiere  la información de cuántos dipositivos se encuentran en cada piso
+**3- Con el fin de llevar un registro de inventario, se requiere  la información de cuántos dipositivos se encuentran en cada piso**
 ``` js
 db.Existencias.aggregate([
     { // Agrupando por piso y dispositivo para poder contar el número de dispositivos 
@@ -252,12 +255,13 @@ db.Existencias.aggregate([
     }
 ])
 ```
+Resultado de la consulta: 
 ```js
 { "_id" : { "piso" : 3 }, "Dispositivos" : [ { "nombre" : "Ventilador", "cantidad" : 5 }, { "nombre" : "Tensiometro", "cantidad" : 5 } ] }
 { "_id" : { "piso" : 2 }, "Dispositivos" : [ { "nombre" : "Regulador vacío adulto", "cantidad" : 6 } ] }
 { "_id" : { "piso" : 1 }, "Dispositivos" : [ { "nombre" : "Bomba de infusion", "cantidad" : 2 } ] }
 ```
-4. El comite de ingeniería requiere programar nuevos mantenimientos, para esto se necesita saber que dispositivos no han tenido mantenimiento los últimos dos años. 
+**4- El comite de ingeniería requiere programar nuevos mantenimientos, para esto se necesita saber que dispositivos no han tenido mantenimiento los últimos dos años.** 
 
 ```js
 db.Existencias.find({ 
@@ -268,6 +272,7 @@ db.Existencias.find({
     "_id":0
 }).pretty()
 ```
+Resultado de la consulta: 
 ```js
 {
     "nombreDispositivo" : "Bomba de infusion",
@@ -407,7 +412,7 @@ db.Existencias.find({
 }
 ```
 
-5. Se requiere hacer un proceso de obsolescencia para esto se necesita conocer la cantidad total de dispositivos activos e inactivos en todo el hospital.
+**5- Se requiere hacer un proceso de obsolescencia para esto se necesita conocer la cantidad total de dispositivos activos e inactivos en todo el hospital.**
 
 ```js
 db.Existencias.aggregate([
@@ -421,6 +426,7 @@ db.Existencias.aggregate([
     }
 ])
 ```
+Resultado de la consulta: 
 ```js
 { "_id" : { "Estado" : 1 }, "numeroDispositivos" : 18 }
 { "_id" : { "Estado" : 0 }, "numeroDispositivos" : 1 }
