@@ -83,7 +83,7 @@ La relacion entre la coleccion de Proveedores e Inventarios es de muchos a uno, 
 ### Colección: Login
 ![image](https://user-images.githubusercontent.com/64289108/132766682-f3877a5f-682e-4724-a995-dcbd41470a08.png)
 
-En el siguiente enlace, encontrará informarción correspondiente, al código javaScript implementado para la creación de cada una de las colecciónes, y las respectivas consultas realizadas **https://github.com/Bio-web/tecnologias-web/blob/a8b872fc5cd682c9ecee7940d5705f019e7c0175/Proyecto_2/base.js **
+En el siguiente enlace, encontrará informarción correspondiente, al código javaScript implementado para la creación de cada una de las colecciónes, y las respectivas consultas realizadas <https://github.com/Bio-web/tecnologias-web/blob/a8b872fc5cd682c9ecee7940d5705f019e7c0175/Proyecto_2/base.js> 
 
 ## Consultas
 
