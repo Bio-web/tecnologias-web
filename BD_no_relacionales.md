@@ -11,10 +11,11 @@ Las instituciones hospitalarias requieren mantener un control estricto de los di
 
 # Metodología
 
-Para el diseño de la base de datos que se presenta a continuación se tuvieron en cuenta dos criterios:
+Para el diseño de la base de datos que se presenta a continuación se tuvieron en cuenta los siguientes criterios:
 - **login** :Acceso por usuario según su función en la compañia: aquí se asignan los posibles permisos que puede adquirir un usuario, estos varian desde Consultar, Agregar y Eliminar.
 - **Inventario**: Aquí se almacena la información de cada dispositivo, detallando su marca, modelo, proveedor, tipo de funcionamiento, etc.
 - **Existencias**: Se almacena la información de que dispositivos se encuentran activos o inactivos en el hospital, última fecha de mantenimiento y ubicación en el hospital.
+- **Proveedores**: Se almacena una base de datos sobre la información de contacto de los proveedores de los dispositivos existentes en el inventario
  
 Para definir las colecciones, se definen los siguientes campos:
 
