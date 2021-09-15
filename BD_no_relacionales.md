@@ -21,54 +21,54 @@ Para definir las colecciones, se definen los siguientes campos:
 
 ## Colección: Inventario
 
-Esta coleccion tendra los dispositivos existentes en cada ubicacion fisica del hospital, referenciando a los dispositivos con un identificador que inicia con las primeras letras del nombre del dispositivo y un consecutivo, ademas del estado de funcionamiento y la fecha del ultimo mantenimiento realizado
+Esta colección tendrá los dispositivos existentes en cada ubicación física del hospital, referenciando a los dispositivos con un identificador que inicia con las primeras letras del nombre del dispositivo y un consecutivo, ademas del estado de funcionamiento y la fecha del último mantenimiento realizado
 
 * **nombreDispositivo**: Campo tipo string que hace referencia al nombre del dispositivo
 * **tipo**: Lista de colecciones con datos de marca, modelo, proveedor y registro invima de un dispositivo
-* **id**: Identificador alfanumerico unico que representa un dispositivo segun marca y modelo
+* **id**: Identificador alfanumérico único que representa un dispositivo segun marca y modelo
 * **marca**: Campo tipo string que guarda el nombre de la marca
 * **modelo**: Campo tipo string que guarda el nombre del modelo
 * **proveedor**: Campo tipo string que guarda el nombre del proveedor
 * **registroInvima**: Campo tipo string que guarda el registro invima del dispositivo
-* **tipoFuncionamiento**: Campo tipo string que almacena el tipo de funcionamiento, puede ser mecanico, electromecanico o electrico
-* **tipoRiesgo**: Campo tipo string indica el tipo de riesgo segun la legislacion colombiana
+* **tipoFuncionamiento**: Campo tipo string que almacena el tipo de funcionamiento, puede ser mecánico, electromecánico o eléctrico
+* **tipoRiesgo**: Campo tipo string indica el tipo de riesgo segun la legislación colombiana
 
 ## Colección: Existencias
 
 
 * **nombreDispositivo**: Campo tipo string que hace referencia al nombre del dispositivo
-* **tipoDispositivo**: Identificador alfanumerico unico que identifica un dispositivo desde la coleccion inventario
-* **ubicacionDispositivo**: coleccion que identifica la ubicacion de un dispositivo segun el piso y habitacion
-* **piso**: Campo tipo numerico que identifica el piso donde esta el dispositivo
-* **habitacion**: Campo tipo alfanumerico que identifica la habitacion especifica donde se encuentra el dispositivo
+* **tipoDispositivo**: Identificador alfanumérico único que identifica un dispositivo desde la colección inventario
+* **ubicacionDispositivo**: colección que identifica la ubicación de un dispositivo según el piso y habitación
+* **piso**: Campo tipo numérico que identifica el piso donde está el dispositivo
+* **habitacion**: Campo tipo alfanumérico que identifica la habitación especifica donde se encuentra el dispositivo
 * **fechaMantenimiento**: Campo tipo fecha con formato ISO donde se guarda la fecha del ultimo mantenimiento realizado
-* **estado**: campo numerico que indica si el dispositivo esta en uso
-* **cantidad**: campo numerico que indica la cantidad de dispositivos en la ubicacion
+* **estado**: campo numérico que indica si el dispositivo está en uso
+* **cantidad**: campo numérico que indica la cantidad de dispositivos en la ubicación
 
 ## Colección: proveedores 
 
 * **Nombre**: Campo tipo string que guarda el nombre de la empresa proveedora de servicios y equipos
-* **NIT**: Campo tipo numerico que representa el numero  de identificacion tributario del proveedor
-* **Telefono**: Campo tipo numerico que guarda el número de telefono del proveedor
+* **NIT**: Campo tipo numérico que representa el número  de identificación tributario del proveedor
+é* **Teléfono**: Campo tipo numérico que guarda el número de teléfono del proveedor
 * **Ciudad**: Campo tipo string que guarda la ciudad donde se encuentra la sede de ventas del proveedor
 * **Direccion**: Campo tipo string que guarda lugar de la sede de venta del proveedor
 * **Email**: Campo tipo string que guarda el correo electrónico del contacto
 
 ## Colección: Usuarios
 
-Esta coleccion contiene la informacion de login y permisos de los usuarios para la base de datos
+Esta colección contiene la información de login y permisos de los usuarios para la base de datos
 * **User**: Campo tipo string que hace referencia al nombre del usuario
 * **Password**: Campo tipo string que hace referencia a la contraseña del usuario
-* **permisos**: Coleccion que especifica que permisos tiene cada usuario
-* **Leer**: Valor numerico que indica si puede o no leer la informacion de la base de datos
-* **Editar**: Valor numerico que indica si puede o no editar la informacion de la base de datos
-* **Eliminar**: Valor numerico que indica si puede o no eliminar la informacion de la base de datos
+* **permisos**: Colección que especifica que permisos tiene cada usuario
+* **Leer**: Valor numérico que indica si puede o no leer la información de la base de datos
+* **Editar**: Valor numérico que indica si puede o no editar la información de la base de datos
+* **Eliminar**: Valor numérico que indica si puede o no eliminar la información de la base de datos
 
 ## Referencias
 
-La relacion entre la coleccion de Inventarios y Existencias es de uno a muchos, porque pueden haber muchos dispositivos en Existencias que referencien a un solo dispositivo en Inventario
+La relación entre la colección de Inventarios y Existencias es de uno a muchos, porque pueden haber muchos dispositivos en Existencias que referencien a un solo dispositivo en Inventario
 
-La relacion entre la coleccion de Proveedores e Inventarios es de muchos a uno, porque un equipo puede tener diferentes proveedores, incluso de la misma marca
+La relación entre la coleccion de Proveedores e Inventarios es de muchos a uno, porque un equipo puede tener diferentes proveedores, incluso de la misma marca
 
 ## Diagramas 
 
