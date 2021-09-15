@@ -1,8 +1,8 @@
 
 ---
 layout: post
-title: REACT
-author: Angie Dahiana Vargas Serna 
+title: Principio de REACT y ejemplo
+author: Angie Dahiana Vargas Serna
 date: 2021-09-04
 ---
 
