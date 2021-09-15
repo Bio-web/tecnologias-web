@@ -103,4 +103,4 @@ para crear rutas en la aplicación
 npm install react-router-dom
 ```
 
-En el siguiente enlace encontrará un ejemplo de películas usando react :
+En el siguiente enlace encontrará un ejemplo de películas usando react : <https://github.com/Bio-web/tecnologias-web/blob/main/MOVIES-REACT.rar>
