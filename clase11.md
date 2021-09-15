@@ -1,9 +1,8 @@
-
 ---
 layout: post
-title: Principio de REACT y ejemplo
-author: Angie Dahiana Vargas Serna
-date: 2021-09-04
+title: Bases de datos
+author: Santiago Gutiérrez Pérez
+date: 2021-03-20
 ---
 
 # REACT
