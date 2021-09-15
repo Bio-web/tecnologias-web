@@ -1,4 +1,11 @@
 
+---
+layout: post
+title: REACT
+author: Angie Dahiana Vargas Serna 
+date: 2021-09-04
+---
+
 # REACT
 <https://create-react-app.dev/>
 
