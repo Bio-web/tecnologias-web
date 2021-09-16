@@ -64,6 +64,8 @@ Esta colección contiene la información de login y permisos de los usuarios par
 * **Editar**: Valor numérico que indica si puede o no editar la información de la base de datos
 * **Eliminar**: Valor numérico que indica si puede o no eliminar la información de la base de datos
 
+![Diagrama trabajo 2](https://user-images.githubusercontent.com/64289108/133672343-6834b285-c7b3-428c-abbf-761e49e25bf0.png)
+
 ## Referencias
 
 La relación entre la colección de Inventarios y Existencias es de uno a muchos, porque pueden haber muchos dispositivos en Existencias que referencien a un solo dispositivo en Inventario
@@ -443,6 +445,7 @@ Resultado de la consulta:
 - Las bases de datos permiten almacenar información de cualquier entidad, como es el caso de los dispositivos médicos, por lo tanto esto resulta útil en el campo de la ingeniería clínica en donde se puede manejar un gran flujo de datos que deben de estar bien organizados y vigilados.
 
 
-# Referencias
+# Referencias bibliográficas 
 1. Hospira PLUM A+, System Operating Manual. Tomado de:[https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf](https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf)
+2. Documentación mongoDB. Tomado de: [https://docs.mongodb.com/guides/](https://docs.mongodb.com/guides/)
 
