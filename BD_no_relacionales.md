@@ -64,7 +64,8 @@ Esta colección contiene la información de login y permisos de los usuarios par
 * **Editar**: Valor numérico que indica si puede o no editar la información de la base de datos
 * **Eliminar**: Valor numérico que indica si puede o no eliminar la información de la base de datos
 
-![Diagrama trabajo 2](https://user-images.githubusercontent.com/64289108/133672343-6834b285-c7b3-428c-abbf-761e49e25bf0.png)
+
+<img src="https://user-images.githubusercontent.com/64289108/133672343-6834b285-c7b3-428c-abbf-761e49e25bf0.png" alt="Diagrama" width="600"/>
 
 ## Referencias
 
