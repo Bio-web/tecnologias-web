@@ -285,6 +285,6 @@ El tutorial para descargarlo se encuentra en:
 
 Ya dentro de la maquina virtual y con el sigueinte comando, luego de entrar a al carpeta /vagrant donde debería estar el archivo de configuración del Docker Compose, se monta la aplicación de back-end.
 
-```vagrant
+```ubuntu
 docker-compose up
 ```
