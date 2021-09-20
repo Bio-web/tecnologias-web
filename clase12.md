@@ -228,3 +228,17 @@ También cabe resaltar que en este componente se uso el hook de REACT **useReduc
 ### Local Storage
 
 Se puede almacenar datos en el navegador, ya sea en Local que es común para todas laspestañas o en la sesión que sólo existe en su respectiva pestaña. Esto se usó en el componente Login del ejempo de clase.
+
+## Patrones Arquitectónicos
+
+Estándares establecidos para atacar problemas específicos en programación. Dicho de otra manera son soluciones abstractas y reutilizables para problemas frecuentes en la arquitectur de software.
+
+### MVC
+
+Es el patrón Modelo-Vista-Controlador que corresponden a las capas de datos, interfaz de usuario y la lógica. La idea es que la capa de vista no tengan acceso a los datos, y usar el control como intermediarios.
+
+### Arquitectura de Microservicios
+
+En el pasado en un único servidor se guaradab toda la aplicación, osea eran aplicaciones **Monoliticas** por lo que si había sobrecarga de peticiones a un servidor se debía usar más servidores para suplir la demanda.
+
+Para mejorar la experiencia del usuario se ideo la llamada arquitectura de microservicios, en donde se divide una aplicación en diferentes aplicaciones e independientes que pueden diferir en lenguaje de programación y en base de datos. De manera que si algún microservicio falla, el reinicio de este es corto y se hace inperceptible la caída para los usuarios que no estuvieran haciendo transacciones con ese servicio. Esto también permite hacer más replicables los microservicios de manera que se pueden crear más servidores o maquinas virtuales de respaldo de respaldo.
