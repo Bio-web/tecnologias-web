@@ -223,3 +223,8 @@ function GuardarPelicula() {
   );
 }
 ```
+También cabe resaltar que en este componente se uso el hook de REACT **useReducer** para poder ir actualizando el objeto que contenía la información del formulario cada que un campo cambiaba de valor.
+
+### Local Storage
+
+Se puede almacenar datos en el navegador, ya sea en Local que es común para todas laspestañas o en la sesión que sólo existe en su respectiva pestaña. Esto se usó en el componente Login del ejempo de clase.
