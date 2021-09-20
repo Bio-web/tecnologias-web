@@ -242,3 +242,28 @@ Es el patrón Modelo-Vista-Controlador que corresponden a las capas de datos, in
 En el pasado en un único servidor se guaradab toda la aplicación, osea eran aplicaciones **Monoliticas** por lo que si había sobrecarga de peticiones a un servidor se debía usar más servidores para suplir la demanda.
 
 Para mejorar la experiencia del usuario se ideo la llamada arquitectura de microservicios, en donde se divide una aplicación en diferentes aplicaciones e independientes que pueden diferir en lenguaje de programación y en base de datos. De manera que si algún microservicio falla, el reinicio de este es corto y se hace inperceptible la caída para los usuarios que no estuvieran haciendo transacciones con ese servicio. Esto también permite hacer más replicables los microservicios de manera que se pueden crear más servidores o maquinas virtuales de respaldo de respaldo.
+
+## BackEnd con Docker-Compose
+
+La parte del software quw tiene acceso a la base de datos, esta montado en servidores que reciben solicitudes del FrontEnd.
+
+Se trabajo usando plantillas de docker-compose facilitadas por el profesordisponibles en el siguiente repositorio.
+
+<https://github.com/afreydev/dev-docker-templates/>
+
+### Protocolo HTTP
+
+Protocolo basado en texto para comunicar servidores en donde se envia texto y la respuesta es texto. Ya se hizo una revisión de ese tema en la clase 11.
+
+### SOAP
+
+Siglas para simple object access protocol, es un protocolo de transferecia de datos algo antiguo. Difiere de JSON en que es más largo porque incluye más información.
+
+### Restful
+
+Patrón arquitectónico implementado aprovechando http. Usado para comunicación entre sistemas.
+
+### JSON
+
+Protocolo de bajo peso para intercambio de datos y de fácil lectura para humanos.
+
