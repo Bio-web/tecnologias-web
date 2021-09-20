@@ -267,3 +267,21 @@ Patrón arquitectónico implementado aprovechando http. Usado para comunicación
 
 Protocolo de bajo peso para intercambio de datos y de fácil lectura para humanos.
 
+## Docker
+
+Usando la maquina virtual de Vagrant estudiada en las primeras clases se usara docker para compartimentalizar el back end de la aplicación a desarrollar.
+
+Usando el tutorial del sitio web de Docker se instala este en la maquina virtual montada con vagrant.
+
+<https://docs.docker.com/engine/install/ubuntu/>
+
+#### Docker Compose
+
+Otra herramienta a usar en la creación de proyectos de BackEnd es Docker Compose que permite por medio de lenguaje declarativo crear un proyecto de Docker de manera que administra cosas como la instalación de paquetes requeridos a la hora de crear la imagen.
+
+El tutorial para descargarlo se encuentra en:
+
+<https://docs.docker.com/compose/install/>
+
+Ya dentro de la maquina virtual y con el sigueinte comando, luego de entrar a al carpeta /vagrant donde debería estar el archivo de configuración del Docker Compose, se monta la aplicación de back-end.
+
