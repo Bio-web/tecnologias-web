@@ -14,3 +14,4 @@ Lista de clases
 - [Clase 09: Tecnologias de Desarrollo Web: HTML y CSS](https://bio-web.github.io/tecnologias-web/clase09)
 - [Proyecto 2: Bases de datos no relacionales](https://bio-web.github.io/tecnologias-web/BD_no_relacionales)
 - [Clase 11: REACT ](https://bio-web.github.io/tecnologias-web/clase11)
+- [Clase 12: REACT-Docker Compose](https://bio-web.github.io/tecnologias-web/clase12)
