@@ -19,6 +19,8 @@ Esta es la barra superior de la página en donde se muestra los botones de naveg
 # Conclusiones
 
 
+
+
 # Referencias bibliográficas 
 1. Hospira PLUM A+, System Operating Manual. Tomado de:[https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf](https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf)
 
