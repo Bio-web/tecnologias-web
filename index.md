@@ -15,3 +15,4 @@ Lista de clases
 - [Proyecto 2: Bases de datos no relacionales](https://bio-web.github.io/tecnologias-web/BD_no_relacionales)
 - [Clase 11: REACT ](https://bio-web.github.io/tecnologias-web/clase11)
 - [Clase 12: REACT-Docker Compose](https://bio-web.github.io/tecnologias-web/clase12)
+- [Proyecto 3: Frontend](https://bio-web.github.io/tecnologias-web/Proyecto_Frontend)
