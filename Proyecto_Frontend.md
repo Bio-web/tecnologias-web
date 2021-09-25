@@ -6,7 +6,8 @@ date: 2021-10-02
 ---
 
 # Introducción
-Las instituciones hospitalarias requieren mantener un control estricto de los dispositivos médicos, por lo tanto se debe tener almacenada la información respecto a estos de manera ordenada y concisa, para solventar este problema se definen bases de datos que contienen los datos mas relevantes de cada dispositivo. Esto resulta útil para definir agendas de mantenimieno preventivo, control metrológico y tecnovigilancia, tambien para tener fácil acceso a la información de suministros ofrecidos por los proveedores en caso de requerir algún tipo de servicio.
+Las instituciones hospitalarias requieren mantener un control estricto de los dispositivos médicos, por lo tanto se debe tener almacenada la información respecto a estos de manera ordenada y concisa, para solventar este problema se definen bases de datos que contienen los datos mas relevantes de cada dispositivo. Esto resulta útil para definir agendas de mantenimieno preventivo, control metrológico y tecnovigilancia, tambien para tener fácil acceso a la información de suministros ofrecidos por los proveedores en caso de requerir algún tipo de servicio. 
+
 En este trabajo se busca presentar una alternativa para al almacenamiento y consulta de los datos del inventario de un hospital de forma interactiva, para esto se presenta un diseño de una página web basada en tecnologias actuales tales como React, Bootstrap, html, JavaScript y css.
 
 # Metodología
@@ -97,6 +98,8 @@ La página idealmente contaría con diferentes microservicios, uno para el login
 
 Una vez logeado en el sistema, se tiene un microservicio para Existencias, en donde se pueden consultar la cantidad y datos de los dispositivos de manera independiente, permitiendo el buen funcionamiento de los demas componentes, de igual manera se tiene otro microservicio para proveedores que cumple la misma funcionalidad.
 
+## Repositorio
+El código de este proyecto se encuentra disponible en el siguiente repositorio: [Inventario](https://github.com/Bio-web/Inventario)
 
 # Conclusiones
 - Las tecnologías web permiten un diseño de aplicaciones rápidas, estables y altamente personalizables.
