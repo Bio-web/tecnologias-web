@@ -98,7 +98,7 @@ En esta parte se muestra la información exclusiva de cada proveedor.
 
 <p align="center">
   <img src="![p2](https://user-images.githubusercontent.com/64289042/135723656-2d856e8e-84e9-4bfa-99ed-02a297538a8d.jpeg)
-")
+
        
 "/>
 </p>
