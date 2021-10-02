@@ -92,6 +92,7 @@ Aquí se muestra la información de contacto de los proveedores de los equipos e
 <p align="center">
   <img src="https://user-images.githubusercontent.com/64289042/135723867-23871061-b2d0-49d3-b28b-756f6948a70f.png"/>
 </p>
+
 ### Proveedor
 En esta parte se muestra la información exclusiva de cada proveedor.
 
