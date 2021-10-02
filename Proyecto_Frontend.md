@@ -90,13 +90,13 @@ Al dar click en cualquiera de los dispositivos listados, se ingresa a una nueva 
 Aquí se muestra la información de contacto de los proveedores de los equipos existentes en el inventario.
 
 <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/64289042/135723867-23871061-b2d0-49d3-b28b-756f6948a70f.png)"/>
+  <img src="https://user-images.githubusercontent.com/64289042/135723867-23871061-b2d0-49d3-b28b-756f6948a70f.png"/>
 </p>
 ### Proveedor
 En esta parte se muestra la información exclusiva de cada proveedor.
 
 <p align="center">
-  <img src="![image](https://user-images.githubusercontent.com/64289042/135723886-1efadb2f-3a0a-415c-b8e5-9aed74765ae0.png)"/>
+  <img src="https://user-images.githubusercontent.com/64289042/135723886-1efadb2f-3a0a-415c-b8e5-9aed74765ae0.png"/>
 </p>
 ## Propuesta de microservicios
 La página idealmente contaría con diferentes microservicios, uno para el login el cual tendría una conexión al servidor y podrá recibir peticiones independientes a la carga de la página principal, por ejemplo si ya hay usuarios logeados y se recibe un gran flujo de nuevos usuarios, los usuarios ya conectados no se veran afectados porque el servicio de login es independiente del servicio principal.
