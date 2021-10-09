@@ -81,10 +81,13 @@ El servidor backend en la ruta `http://localhost:8080/existencias/<id>` recibe e
 </p>
 
 ## Repositorio
-El código de este proyecto se encuentra disponible en el siguiente repositorio: [Inventario](https://github.com/Bio-web/Inventario-Backend)
+El código de este proyecto se encuentra disponible en el siguiente repositorio: [Inventario Backend](https://github.com/Bio-web/Inventario-Backend)
 
 # Conclusiones
-- 
+- La compartimentalización por medio de Docker permite desarrollar y probar de manera ágil las aplicaciones de Backend.
+- El uso de máquinas virtuales por medio de Vagrant facilita la creación de entornos optimizados para el desarrollo y despliegue de aplicaciones.
+- Postman es una herramienta útil para verificar el correcto funcionamiento de los métodos CRUD por medio de sus respectivas API.
+- Docker permite integrar el Backend y el Frontend debido a su capacidad de separar procesos y ejecutarlos en paralelo.
 
 # Referencias bibliográficas 
 1. Hospira PLUM A+, System Operating Manual. Tomado de: [Manual de usuario](https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf]https://www.icumed.com/media/9566/plum_aplus_with_hospira_mednet_software.pdf)
